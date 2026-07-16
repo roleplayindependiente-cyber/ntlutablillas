@@ -306,7 +306,7 @@ font-family: 'Poppins', sans-serif;
   box-shadow:
     0 12px 30px rgba(44, 23, 61, .26),
     inset 0 1px 0 rgba(246, 243, 248, .16);
-  color: var(--title);
+  color: var(--subtitle);
   font: 500 13px/1.72 'Poppins', sans-serif;
   text-align: justify;
 }
