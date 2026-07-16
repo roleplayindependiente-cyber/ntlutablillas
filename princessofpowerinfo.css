@@ -215,7 +215,7 @@ font-family: 'Poppins', sans-serif;
 
 .marina-concert-subtitle {
   margin-top: 7px;
-  color: var(--marina-lavender);
+  color: var(--subtitle);
   font: 700 12px/1.2 "Cinzel", serif;
   text-shadow: 0 0 7px rgba(139, 61, 255, .42);
   text-transform: lowercase;
@@ -443,36 +443,49 @@ font-family: 'Poppins', sans-serif;
   }
 }
 
-.marinaconcert-body b,
-.marinaconcert-body strong {
+.marinaconcert-shell .marinaconcert-body b,
+.marinaconcert-shell .marinaconcert-body b *,
+.marinaconcert-shell .marinaconcert-body strong,
+.marinaconcert-shell .marinaconcert-body strong * {
   color: var(--subtitle) !important;
+  -webkit-text-fill-color: var(--subtitle) !important;
   font-weight: 700;
 }
 
-.marinaconcert-body em,
-.marinaconcert-body i {
+.marinaconcert-shell .marinaconcert-body em,
+.marinaconcert-shell .marinaconcert-body em *,
+.marinaconcert-shell .marinaconcert-body i,
+.marinaconcert-shell .marinaconcert-body i * {
   color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
   font-style: italic;
 }
 
-.marinaconcert-body u {
+.marinaconcert-shell .marinaconcert-body u,
+.marinaconcert-shell .marinaconcert-body u * {
   color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
   text-decoration-color: rgba(216, 199, 255, .65) !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
-.marinaconcert-body s,
-.marinaconcert-body strike {
+.marinaconcert-shell .marinaconcert-body s,
+.marinaconcert-shell .marinaconcert-body s *,
+.marinaconcert-shell .marinaconcert-body strike,
+.marinaconcert-shell .marinaconcert-body strike * {
   color: inherit !important;
-  text-decoration-color: rgba(216, 199, 255, .45);
+  -webkit-text-fill-color: currentColor !important;
+  text-decoration-color: rgba(216, 199, 255, .45) !important;
 }
 
-.marinaconcert-body mark {
+.marinaconcert-shell .marinaconcert-body mark,
+.marinaconcert-shell .marinaconcert-body mark * {
   padding: 1px 4px;
   border-radius: 3px;
   color: var(--subtitle) !important;
-  background: rgba(216, 199, 255, .10);
+  -webkit-text-fill-color: var(--subtitle) !important;
+  background: rgba(216, 199, 255, .10) !important;
 }
 
 .marina-concert-gallery {
