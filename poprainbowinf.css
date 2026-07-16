@@ -230,7 +230,7 @@
   inset: 11px;
   z-index: 2;
 
-  border: 1px solid var(--border1);
+  border: 2px solid var(--border1);
   border-radius: 10px;
 
   opacity: .46;
@@ -539,7 +539,7 @@
     ),
     var(--dbckg3);
 
-  border: 1px solid var(--border1);
+  border: 2px solid var(--border1);
   border-radius: 8px;
 
   color: var(--subtitle);
