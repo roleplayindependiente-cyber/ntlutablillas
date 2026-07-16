@@ -403,8 +403,6 @@
   text-align: justify;
 }
 
-/* NEGRITAS */
-
 .marina-concert-shell .marina-concert-body b,
 .marina-concert-shell .marina-concert-body b *,
 .marina-concert-shell .marina-concert-body strong,
@@ -418,7 +416,6 @@
     0 0 4px rgba(193,79,255,.12);
 }
 
-/* ITÁLICAS */
 
 .marina-concert-shell .marina-concert-body em,
 .marina-concert-shell .marina-concert-body em *,
@@ -433,8 +430,6 @@
     0 0 4px rgba(193,79,255,.08);
 }
 
-/* SUBRAYADO */
-
 .marina-concert-shell .marina-concert-body u,
 .marina-concert-shell .marina-concert-body u * {
   color: #d8c7ff !important;
@@ -445,7 +440,6 @@
   text-underline-offset: 3px;
 }
 
-/* TACHADO */
 
 .marina-concert-shell .marina-concert-body s,
 .marina-concert-shell .marina-concert-body s *,
@@ -456,8 +450,6 @@
 
   text-decoration-color: rgba(193,79,255,.45) !important;
 }
-
-/* MARK */
 
 .marina-concert-shell .marina-concert-body mark,
 .marina-concert-shell .marina-concert-body mark * {
@@ -475,19 +467,19 @@
 }
 
 
-.marinarol-bottom {
+.marinaconcert-bottom {
   position: relative;
+  isolation: isolate;
   height: 62px;
   margin: 0 -40px;
   overflow: hidden;
   background: transparent !important;
 }
 
-.marina-concert-bottom::before {
+.marinaconcert-bottom::before {
   content: "";
-
   position: absolute;
- inset: 0;
+  inset: 0;
 
   background:
     radial-gradient(
@@ -510,46 +502,49 @@
       var(--marina-violet) 0%,
       var(--marina-orchid) 47%,
       var(--marina-cosmic) 100%
-    ) !important;
-
-  clip-path:
-    polygon(
-      0 12px,
-      13% 5px,
-      27% 18px,
-      45% 8px,
-      63% 22px,
-      80% 9px,
-      100% 18px,
-      100% 100%,
-      0 100%
     );
+
+  clip-path: polygon(
+    0 12px,
+    13% 5px,
+    27% 18px,
+    45% 8px,
+    63% 22px,
+    80% 9px,
+    100% 18px,
+    100% 100%,
+    0 100%
+  );
 
   opacity: .88;
 }
 
-.marina-concert-bottom::after {
+.marinaconcert-bottom::after {
   content: "";
-
   position: absolute;
-  inset: 18px 0 auto;
-
-  height: 1px;
+  inset: 0;
 
   background:
     linear-gradient(
-      90deg,
-      transparent,
-      var(--marina-pearl),
-      var(--marina-orchid),
-      var(--marina-pearl),
-      transparent
+      180deg,
+      var(--marina-violet) 0%,
+      var(--marina-orchid) 47%,
+      var(--marina-cosmic) 100%
     );
 
-  box-shadow:
-    0 0 9px rgba(246, 243, 248, .48);
+  clip-path: polygon(
+    0 12px,
+    13% 5px,
+    27% 18px,
+    45% 8px,
+    63% 22px,
+    80% 9px,
+    100% 18px,
+    100% 100%,
+    0 100%
+  );
 
-  opacity: .55;
+  z-index: -1;
 }
 
 @media (max-width: 620px) {
