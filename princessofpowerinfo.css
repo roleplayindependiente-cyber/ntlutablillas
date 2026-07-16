@@ -101,19 +101,35 @@
 }
 
 .marina-concert-name {
+  position: relative;
   display: inline-block;
   max-width: 100%;
-  padding: 0 10px 4px;
-
-  border-bottom: 1px solid var(--border1);
-
+  padding: 0 10px 7px;
   color: var(--subtitle);
   font: 700 22px/1.1 "Cinzel", serif;
   word-break: break-word;
-
   text-shadow:
     0 0 8px rgba(193, 79, 255, .75),
     0 0 20px rgba(193, 79, 255, .38);
+}
+
+.marina-concert-name::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--marina-lavender),
+    var(--marina-orchid),
+    var(--marina-lavender),
+    transparent
+  );
+  box-shadow: 0 0 7px rgba(193, 79, 255, .30);
+  opacity: .75;
 }
 
 .marina-concert-subtitle {
