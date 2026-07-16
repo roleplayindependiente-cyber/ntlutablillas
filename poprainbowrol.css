@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.marinarol-shell,
+.marinarol-shell * {
+  box-sizing: border-box;
+}
+
+.marinarol-shell {
+  --pride-red: #FF6B8A;
+  --pride-orange: #FFAA6B;
+  --pride-yellow: #FFE17A;
+  --pride-green: #7AD8A0;
+  --pride-blue: #7CB8FF;
+  --pride-violet: #B18BFF;
+
+  --pride-lavender: #E8DFFF;
+  --pride-silver: #DDD7E3;
+  --pride-pearl: #FAF8FC;
+  --pride-cosmic: #231A31;
+
+  width: 470px;
+  margin: 40px auto;
+  padding: 36px 40px 0;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(255, 107, 138, .10),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 94% 8%,
+      rgba(177, 139, 255, .12),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 48% 100%,
+      rgba(124, 184, 255, .08),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 170, 107, .035),
+      rgba(255, 225, 122, .025) 28%,
+      rgba(122, 216, 160, .035) 50%,
+      rgba(124, 184, 255, .04) 72%,
+      rgba(177, 139, 255, .055)
+    ),
+    var(--dbckg5);
+
+  border: 1px solid var(--border1);
+  border-radius: 10px;
+  color: var(--subtitle);
+  font-family: 'Poppins', sans-serif;
+  box-shadow:
+    0 14px 35px rgba(35, 26, 49, .12),
+    inset 0 1px 0 rgba(250, 248, 252, .04);
+}
+
+
+.marinarol-top {
+  display: grid;
+  grid-template-columns: 1fr 82px auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 22px;
+  margin-bottom: 38px;
+}
+
+.marinarol-kicker {
+  color: var(--subtitle);
+  font: 700 11px/1 'Cinzel', serif;
+  text-align: center;
+  text-transform: lowercase;
+  letter-spacing: .4px;
+
+  text-shadow:
+    0 0 8px rgba(255, 107, 138, .28),
+    0 0 16px rgba(177, 139, 255, .22);
+}
+
+.marinarol-line {
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--pride-red) 13%,
+    var(--pride-orange) 29%,
+    var(--pride-yellow) 43%,
+    var(--pride-green) 58%,
+    var(--pride-blue) 74%,
+    var(--pride-violet) 89%,
+    transparent 100%
+  );
+
+  box-shadow:
+    0 0 7px rgba(124, 184, 255, .22),
+    0 0 11px rgba(177, 139, 255, .14);
+
+  opacity: .82;
+}
+
+.marinarol-data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--subtitle);
+  font: 700 13px/1 'Cinzel', serif;
+}
+
+
+.marinarol-head {
+  display: grid;
+  grid-template-columns: 1fr 92px;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.marinarol-titleblock {
+  min-width: 0;
+  text-align: center;
+}
+
+.marinarol-name {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0 10px 8px;
+
+  color: var(--subtitle);
+  font: 700 22px/1.1 'Cinzel', serif;
+  letter-spacing: .3px;
+  word-break: break-word;
+
+  text-shadow:
+    0 0 8px rgba(177, 139, 255, .33),
+    0 0 17px rgba(124, 184, 255, .18),
+    0 0 25px rgba(255, 107, 138, .10);
+}
+
+.marinarol-name::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  bottom: 0;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pride-red),
+    var(--pride-orange),
+    var(--pride-yellow),
+    var(--pride-green),
+    var(--pride-blue),
+    var(--pride-violet),
+    transparent
+  );
+
+  box-shadow:
+    0 0 6px rgba(124, 184, 255, .20),
+    0 0 10px rgba(177, 139, 255, .14);
+
+  opacity: .78;
+}
+
+.marinarol-subtitle {
+  margin-top: 8px;
+  color: var(--subtitle);
+  font: 700 12px/1.2 'Cinzel', serif;
+  letter-spacing: .3px;
+  text-transform: lowercase;
+
+  text-shadow:
+    0 0 7px rgba(255, 107, 138, .17),
+    0 0 10px rgba(177, 139, 255, .20);
+}
+
+
+.marinarol-mark {
+  position: relative;
+  display: grid;
+  width: 92px;
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+
+  border-radius: 12px;
+  color: var(--pride-pearl);
+
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255, 225, 122, .20),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(177, 139, 255, .18),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 107, 138, .13),
+      rgba(255, 170, 107, .08) 25%,
+      rgba(122, 216, 160, .08) 52%,
+      rgba(124, 184, 255, .11) 75%,
+      rgba(177, 139, 255, .15)
+    ),
+    var(--dbckg5);
+
+  box-shadow:
+    inset 0 0 18px rgba(232, 223, 255, .10),
+    0 0 18px rgba(124, 184, 255, .10),
+    0 0 26px rgba(177, 139, 255, .08);
+}
+
+.marinarol-mark::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 11px;
+
+  border: 1px solid var(--border1);
+  border-radius: 10px;
+  opacity: .46;
+}
+
+.marinarol-mark::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 74%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pride-red),
+    var(--pride-yellow),
+    var(--pride-blue),
+    var(--pride-violet),
+    transparent
+  );
+
+  box-shadow:
+    0 0 6px rgba(250, 248, 252, .32),
+    0 0 10px rgba(177, 139, 255, .20);
+
+  opacity: .50;
+  transform: rotate(-24deg);
+}
+
+.marinarol-mark img {
+  position: absolute;
+  inset: 4px;
+  z-index: 1;
+
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  object-fit: cover;
+  border-radius: 8px;
+
+  filter:
+    contrast(1.04)
+    saturate(1.08);
+}
+
+
+.marinarol-body {
+  position: relative;
+  isolation: isolate;
+
+  padding: 26px 28px 28px;
+  margin-bottom: 28px;
+
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(255, 107, 138, .065),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(177, 139, 255, .085),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(124, 184, 255, .055),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 170, 107, .025),
+      rgba(255, 225, 122, .018) 28%,
+      rgba(122, 216, 160, .022) 50%,
+      rgba(124, 184, 255, .028) 72%,
+      rgba(177, 139, 255, .035)
+    ),
+    var(--dbckg3);
+
+  border: 1px solid var(--border1);
+  border-radius: 8px;
+
+  color: var(--subtitle);
+  font: 500 13px/1.72 'Poppins', sans-serif;
+  text-align: justify;
+
+  box-shadow:
+    inset 0 1px 0 rgba(250, 248, 252, .025),
+    0 8px 22px rgba(35, 26, 49, .05);
+}
+
+.marinarol-body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 107, 138, .035),
+      transparent 23%,
+      rgba(255, 225, 122, .018) 40%,
+      transparent 55%,
+      rgba(124, 184, 255, .025) 73%,
+      rgba(177, 139, 255, .04)
+    );
+
+  pointer-events: none;
+}
+
+
+.marinarol-bottom {
+  position: relative;
+  isolation: isolate;
+  height: 68px;
+  margin: 0 -40px;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.marinarol-bottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      92px 43px at 8% 5px,
+      rgba(255, 107, 138, .82) 0 46%,
+      transparent 48%
+    ),
+    radial-gradient(
+      100px 47px at 25% -2px,
+      rgba(255, 170, 107, .82) 0 47%,
+      transparent 49%
+    ),
+    radial-gradient(
+      110px 51px at 43% 7px,
+      rgba(255, 225, 122, .78) 0 47%,
+      transparent 49%
+    ),
+    radial-gradient(
+      112px 52px at 61% -4px,
+      rgba(122, 216, 160, .78) 0 47%,
+      transparent 49%
+    ),
+    radial-gradient(
+      104px 48px at 79% 6px,
+      rgba(124, 184, 255, .80) 0 47%,
+      transparent 49%
+    ),
+    radial-gradient(
+      94px 43px at 96% -1px,
+      rgba(177, 139, 255, .84) 0 46%,
+      transparent 48%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 107, 138, .78) 0%,
+      rgba(255, 170, 107, .76) 18%,
+      rgba(255, 225, 122, .72) 36%,
+      rgba(122, 216, 160, .72) 54%,
+      rgba(124, 184, 255, .76) 73%,
+      rgba(177, 139, 255, .80) 100%
+    );
+
+  clip-path: polygon(
+    0 14px,
+    10% 7px,
+    20% 17px,
+    32% 8px,
+    44% 20px,
+    57% 8px,
+    69% 18px,
+    81% 7px,
+    91% 16px,
+    100% 10px,
+    100% 100%,
+    0 100%
+  );
+
+  opacity: .90;
+}
+
+.marinarol-bottom::after {
+  content: "";
+  position: absolute;
+  inset: 14px 0 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(250, 248, 252, .14),
+    transparent 20%,
+    rgba(35, 26, 49, .08) 100%
+  );
+
+  clip-path: polygon(
+    0 0,
+    10% 0,
+    20% 3px,
+    32% 0,
+    44% 6px,
+    57% 0,
+    69% 4px,
+    81% 0,
+    91% 3px,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  pointer-events: none;
+}
+
+.marinarol-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 13px;
+  z-index: 5;
+
+  color: var(--pride-pearl);
+  font: 700 10px/1 'Cinzel', serif;
+  letter-spacing: .5px;
+  text-align: center;
+
+  text-shadow:
+    0 1px 2px rgba(35, 26, 49, .42),
+    0 0 7px rgba(250, 248, 252, .22),
+    0 0 13px rgba(177, 139, 255, .18);
+}
+
+
+.marinarol-shell .marinarol-body b,
+.marinarol-shell .marinarol-body b *,
+.marinarol-shell .marinarol-body strong,
+.marinarol-shell .marinarol-body strong * {
+  color: #D95378 !important;
+  -webkit-text-fill-color: #D95378 !important;
+  font-weight: 700;
+
+  text-shadow:
+    0 0 4px rgba(255, 107, 138, .12);
+}
+
+.marinarol-shell .marinarol-body em,
+.marinarol-shell .marinarol-body em *,
+.marinarol-shell .marinarol-body i,
+.marinarol-shell .marinarol-body i * {
+  color: #7A65C4 !important;
+  -webkit-text-fill-color: #7A65C4 !important;
+  font-style: italic;
+
+  text-shadow:
+    0 0 4px rgba(177, 139, 255, .10);
+}
+
+.marinarol-shell .marinarol-body u,
+.marinarol-shell .marinarol-body u * {
+  color: #397FAF !important;
+  -webkit-text-fill-color: #397FAF !important;
+
+  text-decoration-color: rgba(124, 184, 255, .78) !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.marinarol-shell .marinarol-body s,
+.marinarol-shell .marinarol-body s *,
+.marinarol-shell .marinarol-body strike,
+.marinarol-shell .marinarol-body strike * {
+  color: #82758A !important;
+  -webkit-text-fill-color: #82758A !important;
+
+  text-decoration-color: rgba(177, 139, 255, .54) !important;
+}
+
+.marinarol-shell .marinarol-body mark,
+.marinarol-shell .marinarol-body mark * {
+  padding: 1px 5px;
+  border-radius: 3px;
+
+  color: #684F91 !important;
+  -webkit-text-fill-color: #684F91 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 107, 138, .12),
+      rgba(255, 225, 122, .15),
+      rgba(122, 216, 160, .12),
+      rgba(124, 184, 255, .13),
+      rgba(177, 139, 255, .15)
+    ) !important;
+
+  box-shadow:
+    0 0 6px rgba(177, 139, 255, .08);
+}
+
+
+
+.marinarol-shell ::selection {
+  color: var(--pride-cosmic);
+  background: rgba(255, 225, 122, .72);
+}
+
+
+
+@media (max-width: 480px) {
+  .marinarol-shell {
+    width: min(470px, calc(100vw - 24px));
+    padding: 30px 24px 0;
+  }
+
+  .marinarol-top {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+
+  .marinarol-line {
+    display: none;
+  }
+
+  .marinarol-head {
+    grid-template-columns: 1fr 78px;
+    gap: 14px;
+  }
+
+  .marinarol-mark {
+    width: 78px;
+  }
+
+  .marinarol-body {
+    padding: 24px 20px 26px;
+    margin-bottom: 24px;
+  }
+
+  .marinarol-bottom {
+    margin-inline: -24px;
+  }
+}
