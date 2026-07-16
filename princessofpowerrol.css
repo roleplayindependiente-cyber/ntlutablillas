@@ -280,12 +280,7 @@
 }
 
 .marinarol-bottom::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 8px;
-  transform: translateX(-50%);
-  opacity: .85;
+  display: none;
 }
 
 .marinarol-footer {
