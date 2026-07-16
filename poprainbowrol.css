@@ -304,7 +304,7 @@
     ),
     var(--dbckg3);
 
-  border: 1px solid var(--border1);
+  border: 2px solid var(--border1);
   border-radius: 8px;
 
   color: var(--subtitle);
