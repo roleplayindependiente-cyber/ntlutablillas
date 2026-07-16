@@ -476,30 +476,7 @@
 }
 
 .marinaconcert-bottom::after {
- content: "";
-  position: absolute;
-  left: 50%;
-  top: 8px;
-
-  width: 180px;
-  height: 1px;
-
-  transform: translateX(-50%);
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(216,199,255,.9),
-      rgba(193,79,255,.9),
-      rgba(216,199,255,.9),
-      transparent
-    );
-
-  box-shadow:
-    0 0 8px rgba(193,79,255,.35);
-
-  opacity: .85;
+  display: none;
 }
 
 @media (max-width: 620px) {
