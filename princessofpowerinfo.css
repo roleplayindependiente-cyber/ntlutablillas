@@ -387,128 +387,91 @@
   text-align: justify;
 }
 
+/* NEGRITAS */
+
 .marina-concert-shell .marina-concert-body b,
 .marina-concert-shell .marina-concert-body b *,
 .marina-concert-shell .marina-concert-body strong,
 .marina-concert-shell .marina-concert-body strong * {
-  color: var(--marina-lavender) !important;
-  -webkit-text-fill-color: var(--marina-lavender) !important;
+  color: #cda9ff !important;
+  -webkit-text-fill-color: #cda9ff !important;
 
   font-weight: 700;
 
   text-shadow:
-    0 0 5px rgba(216, 199, 255, .16),
-    0 0 10px rgba(193, 79, 255, .10);
+    0 0 4px rgba(193,79,255,.12);
 }
+
+/* ITÁLICAS */
 
 .marina-concert-shell .marina-concert-body em,
 .marina-concert-shell .marina-concert-body em *,
 .marina-concert-shell .marina-concert-body i,
 .marina-concert-shell .marina-concert-body i * {
-  color:
-    color-mix(
-      in srgb,
-      var(--marina-orchid) 38%,
-      var(--subtitle)
-    ) !important;
-
-  -webkit-text-fill-color:
-    color-mix(
-      in srgb,
-      var(--marina-orchid) 38%,
-      var(--subtitle)
-    ) !important;
+  color: #bb8fff !important;
+  -webkit-text-fill-color: #bb8fff !important;
 
   font-style: italic;
 
   text-shadow:
-    0 0 7px rgba(193, 79, 255, .10);
+    0 0 4px rgba(193,79,255,.08);
 }
+
+/* SUBRAYADO */
 
 .marina-concert-shell .marina-concert-body u,
 .marina-concert-shell .marina-concert-body u * {
-  color:
-    color-mix(
-      in srgb,
-      var(--marina-lavender) 42%,
-      var(--subtitle)
-    ) !important;
+  color: #d8c7ff !important;
+  -webkit-text-fill-color: #d8c7ff !important;
 
-  -webkit-text-fill-color:
-    color-mix(
-      in srgb,
-      var(--marina-lavender) 42%,
-      var(--subtitle)
-    ) !important;
-
-  text-decoration-color:
-    rgba(193, 79, 255, .48) !important;
-
+  text-decoration-color: rgba(193,79,255,.60) !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-
-  text-shadow:
-    0 0 6px rgba(216, 199, 255, .10);
 }
+
+/* TACHADO */
 
 .marina-concert-shell .marina-concert-body s,
 .marina-concert-shell .marina-concert-body s *,
 .marina-concert-shell .marina-concert-body strike,
 .marina-concert-shell .marina-concert-body strike * {
-  color:
-    color-mix(
-      in srgb,
-      var(--marina-silver) 65%,
-      var(--subtitle)
-    ) !important;
+  color: #bfaed8 !important;
+  -webkit-text-fill-color: #bfaed8 !important;
 
-  -webkit-text-fill-color:
-    color-mix(
-      in srgb,
-      var(--marina-silver) 65%,
-      var(--subtitle)
-    ) !important;
-
-  text-decoration-color:
-    rgba(216, 199, 255, .38) !important;
+  text-decoration-color: rgba(193,79,255,.45) !important;
 }
+
+/* MARK */
 
 .marina-concert-shell .marina-concert-body mark,
 .marina-concert-shell .marina-concert-body mark * {
   padding: 1px 4px;
-
   border-radius: 3px;
 
-  color: var(--marina-lavender) !important;
-  -webkit-text-fill-color: var(--marina-lavender) !important;
+  color: #d8c7ff !important;
+  -webkit-text-fill-color: #d8c7ff !important;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(193, 79, 255, .10),
-      rgba(216, 199, 255, .08)
-    ) !important;
+    rgba(193,79,255,.12) !important;
 
   box-shadow:
-    0 0 8px rgba(193, 79, 255, .08);
+    0 0 6px rgba(193,79,255,.08);
 }
 
 
-.marina-concert-bottom {
+.marinarol-bottom {
   position: relative;
-
   height: 62px;
   margin: 0 -40px;
   overflow: hidden;
-
-  background: var(--marina-cosmic) !important;
+  background: transparent !important;
 }
 
 .marina-concert-bottom::before {
   content: "";
 
   position: absolute;
-  inset: 0;
+ inset: -4px 0 0;
 
   background:
     radial-gradient(
