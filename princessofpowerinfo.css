@@ -33,7 +33,7 @@
     0 18px 42px rgba(44, 23, 61, .38),
     inset 0 1px 0 rgba(246, 243, 248, .22);
   overflow: hidden;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
 font-family: 'Poppins', sans-serif;
 }
 
@@ -47,7 +47,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .marina-concert-kicker {
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 11px/1 "Cinzel", serif;
   text-align: center;
   text-transform: lowercase;
@@ -74,7 +74,7 @@ font-family: 'Poppins', sans-serif;
    font: 700 10px/1 "Cinzel", serif;
   align-items: center;
   gap: 10px;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font-size: 13px;
   line-height: 1;
 }
@@ -89,7 +89,7 @@ font-family: 'Poppins', sans-serif;
   border: 1px solid var(--border1);
   border-radius: 50%;
   background: rgba(216, 199, 255, .08);
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   cursor: help;
   box-shadow:
     inset 0 0 8px rgba(216, 199, 255, .12),
@@ -151,7 +151,7 @@ font-family: 'Poppins', sans-serif;
   ), var(--dbckg5);
   border: 1px solid var(--border1);
   border-radius: 6px;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 600 9px/1.35 'Poppins', sans-serif;
   text-align: center;
   text-transform: uppercase;
@@ -205,7 +205,7 @@ font-family: 'Poppins', sans-serif;
   max-width: 100%;
   padding: 0 10px 4px;
   border-bottom: 1px solid var(--border1);
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 22px/1.1 "Cinzel", serif;
   text-shadow:
     0 0 8px rgba(193, 79, 255, .75),
@@ -240,7 +240,7 @@ font-family: 'Poppins', sans-serif;
       rgba(193, 79, 255, .22),
       rgba(44, 23, 61, .20)
     ), var(--dbckg5);
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   box-shadow:
     inset 0 0 18px rgba(216, 199, 255, .10),
     0 0 20px rgba(193, 79, 255, .14);
@@ -443,42 +443,36 @@ font-family: 'Poppins', sans-serif;
   }
 }
 
-.marina-concert-body b,
-.marina-concert-body strong,
-.marina-concert-body em,
-.marina-concert-body i,
-.marina-concert-body u,
-.marina-concert-body s,
-.marina-concert-body strike,
-.marina-concert-body mark {
-  color: var(--marina-violet) !important;
-}
-
-.marina-concert-body b,
-.marina-concert-body strong {
+.marinaconcert-body b,
+.marinaconcert-body strong {
+  color: var(--subtitle) !important;
   font-weight: 700;
 }
 
-.marina-concert-body em,
-.marina-concert-body i {
+.marinaconcert-body em,
+.marinaconcert-body i {
+  color: inherit !important;
   font-style: italic;
 }
 
-.marina-concert-body u {
-  text-decoration-color: var(--marina-orchid) !important;
+.marinaconcert-body u {
+  color: inherit !important;
+  text-decoration-color: rgba(216, 199, 255, .65) !important;
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
-.marina-concert-body s,
-.marina-concert-body strike {
-  text-decoration-color: var(--marina-orchid);
+.marinaconcert-body s,
+.marinaconcert-body strike {
+  color: inherit !important;
+  text-decoration-color: rgba(216, 199, 255, .45);
 }
 
-.marina-concert-body mark {
-  padding: 1px 3px;
-  background: rgba(193, 79, 255, .14);
+.marinaconcert-body mark {
+  padding: 1px 4px;
   border-radius: 3px;
+  color: var(--subtitle) !important;
+  background: rgba(216, 199, 255, .10);
 }
 
 .marina-concert-gallery {
