@@ -301,45 +301,80 @@
 .marinarol-shell .marinarol-body b *,
 .marinarol-shell .marinarol-body strong,
 .marinarol-shell .marinarol-body strong * {
-  color: var(--subtitle) !important;
-  -webkit-text-fill-color: var(--subtitle) !important;
+  color: var(--marina-lavender) !important;
+  -webkit-text-fill-color: var(--marina-lavender) !important;
   font-weight: 700;
+  text-shadow:
+    0 0 5px rgba(216, 199, 255, .16),
+    0 0 10px rgba(193, 79, 255, .10);
 }
 
 .marinarol-shell .marinarol-body em,
 .marinarol-shell .marinarol-body em *,
 .marinarol-shell .marinarol-body i,
 .marinarol-shell .marinarol-body i * {
-  color: inherit !important;
-  -webkit-text-fill-color: currentColor !important;
+  color: color-mix(
+    in srgb,
+    var(--marina-orchid) 38%,
+    var(--subtitle)
+  ) !important;
+  -webkit-text-fill-color: color-mix(
+    in srgb,
+    var(--marina-orchid) 38%,
+    var(--subtitle)
+  ) !important;
   font-style: italic;
+  text-shadow: 0 0 7px rgba(193, 79, 255, .10);
 }
 
 .marinarol-shell .marinarol-body u,
 .marinarol-shell .marinarol-body u * {
-  color: inherit !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-decoration-color: rgba(216, 199, 255, .65) !important;
+  color: color-mix(
+    in srgb,
+    var(--marina-lavender) 42%,
+    var(--subtitle)
+  ) !important;
+  -webkit-text-fill-color: color-mix(
+    in srgb,
+    var(--marina-lavender) 42%,
+    var(--subtitle)
+  ) !important;
+  text-decoration-color: rgba(193, 79, 255, .48) !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  text-shadow: 0 0 6px rgba(216, 199, 255, .10);
 }
 
 .marinarol-shell .marinarol-body s,
 .marinarol-shell .marinarol-body s *,
 .marinarol-shell .marinarol-body strike,
 .marinarol-shell .marinarol-body strike * {
-  color: inherit !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-decoration-color: rgba(216, 199, 255, .45) !important;
+  color: color-mix(
+    in srgb,
+    var(--marina-silver) 65%,
+    var(--subtitle)
+  ) !important;
+  -webkit-text-fill-color: color-mix(
+    in srgb,
+    var(--marina-silver) 65%,
+    var(--subtitle)
+  ) !important;
+  text-decoration-color: rgba(216, 199, 255, .38) !important;
 }
 
 .marinarol-shell .marinarol-body mark,
 .marinarol-shell .marinarol-body mark * {
   padding: 1px 4px;
   border-radius: 3px;
-  color: var(--subtitle) !important;
-  -webkit-text-fill-color: var(--subtitle) !important;
-  background: rgba(216, 199, 255, .10) !important;
+  color: var(--marina-lavender) !important;
+  -webkit-text-fill-color: var(--marina-lavender) !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(193, 79, 255, .10),
+      rgba(216, 199, 255, .08)
+    ) !important;
+  box-shadow: 0 0 8px rgba(193, 79, 255, .08);
 }
 
 @media (max-width: 480px) {
