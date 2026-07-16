@@ -87,7 +87,7 @@
   text-align: center;
 }
 
-.marina-rol-name {
+.marinarol-name {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -100,7 +100,7 @@
     0 0 20px rgba(193, 79, 255, .38);
 }
 
-.marina-rol-name::after {
+.marinarol-name::after {
   content: "";
   position: absolute;
   left: 10%;
@@ -183,13 +183,13 @@
 
 .marinarol-mark img {
   position: absolute;
-  inset: 0;
+  inset: 4px;
   z-index: 1;
   width: calc(100% - 8px);
   height: calc(100% - 8px);
   object-fit: cover;
   border-radius: 8px;
-    filter:
+  filter:
     contrast(1.05)
     saturate(1.1);
 }
@@ -240,13 +240,19 @@
   height: 62px;
   margin: 0 -40px;
   overflow: hidden;
-  background: transparent !important;
+  background:
+    linear-gradient(
+      180deg,
+      var(--marina-violet) 0%,
+      var(--marina-orchid) 47%,
+      var(--marina-cosmic) 100%
+    ) !important;
 }
 
 .marinarol-bottom::before {
   content: "";
   position: absolute;
-    inset: -4px 0 0;
+  inset: 0;
   background:
     radial-gradient(
       88px 42px at 13% 2px,
@@ -262,13 +268,7 @@
       84px 40px at 92% 5px,
       var(--marina-orchid) 0 44%,
       transparent 46%
-    ),
-    linear-gradient(
-      180deg,
-      var(--marina-violet) 0%,
-      var(--marina-orchid) 47%,
-      var(--marina-cosmic) 100%
-    ) !important;
+    );
   clip-path: polygon(
     0 12px,
     13% 5px,
@@ -284,20 +284,7 @@
 }
 
 .marinarol-bottom::after {
-  content: "";
-  position: absolute;
-  inset: 18px 0 auto;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--marina-pearl),
-    var(--marina-orchid),
-    var(--marina-pearl),
-    transparent
-  );
-  box-shadow: 0 0 9px rgba(246, 243, 248, .48);
-  opacity: .55;
+  display: none;
 }
 
 .marinarol-footer {
@@ -316,75 +303,56 @@
     0 0 18px rgba(193,79,255,.34);
 }
 
-/* NEGRITAS */
-
-.marina-rol-shell .marina-rol-body b,
-.marina-rol-shell .marina-rol-body b *,
-.marina-rol-shell .marina-rol-body strong,
-.marina-rol-shell .marina-rol-body strong * {
-  color: #cda9ff !important;
-  -webkit-text-fill-color: #cda9ff !important;
-
+.marinarol-shell .marinarol-body b,
+.marinarol-shell .marinarol-body b *,
+.marinarol-shell .marinarol-body strong,
+.marinarol-shell .marinarol-body strong * {
+  color: #9a56d1 !important;
+  -webkit-text-fill-color: #9a56d1 !important;
   font-weight: 700;
-
   text-shadow:
-    0 0 4px rgba(193,79,255,.12);
+    0 0 4px rgba(193, 79, 255, .10);
 }
 
-/* ITÁLICAS */
-
-.marina-rol-shell .marina-rol-body em,
-.marina-rol-shell .marina-rol-body em *,
-.marina-rol-shell .marina-rol-body i,
-.marina-rol-shell .marina-rol-body i * {
-  color: #bb8fff !important;
-  -webkit-text-fill-color: #bb8fff !important;
-
+.marinarol-shell .marinarol-body em,
+.marinarol-shell .marinarol-body em *,
+.marinarol-shell .marinarol-body i,
+.marinarol-shell .marinarol-body i * {
+  color: #8654ad !important;
+  -webkit-text-fill-color: #8654ad !important;
   font-style: italic;
-
   text-shadow:
-    0 0 4px rgba(193,79,255,.08);
+    0 0 4px rgba(193, 79, 255, .08);
 }
 
-/* SUBRAYADO */
-
-.marina-rol-shell .marina-rol-body u,
-.marina-rol-shell .marina-rol-body u * {
-  color: #d8c7ff !important;
-  -webkit-text-fill-color: #d8c7ff !important;
-
-  text-decoration-color: rgba(193,79,255,.60) !important;
+.marinarol-shell .marinarol-body u,
+.marinarol-shell .marinarol-body u * {
+  color: #76508f !important;
+  -webkit-text-fill-color: #76508f !important;
+  text-decoration-color: rgba(139, 61, 255, .65) !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
-/* TACHADO */
 
-.marina-rol-shell .marina-rol-body s,
-.marina-rol-shell .marina-rol-body s *,
-.marina-rol-shell .marina-rol-body strike,
-.marina-rol-shell .marina-rol-body strike * {
-  color: #bfaed8 !important;
-  -webkit-text-fill-color: #bfaed8 !important;
-
-  text-decoration-color: rgba(193,79,255,.45) !important;
+.marinarol-shell .marinarol-body s,
+.marinarol-shell .marinarol-body s *,
+.marinarol-shell .marinarol-body strike,
+.marinarol-shell .marinarol-body strike * {
+  color: #806f91 !important;
+  -webkit-text-fill-color: #806f91 !important;
+  text-decoration-color: rgba(139, 61, 255, .48) !important;
 }
 
-/* MARK */
-
-.marina-rol-shell .marina-rol-body mark,
-.marina-rol-shell .marina-rol-body mark * {
+.marinarol-shell .marinarol-body mark,
+.marinarol-shell .marinarol-body mark * {
   padding: 1px 4px;
   border-radius: 3px;
-
-  color: #d8c7ff !important;
-  -webkit-text-fill-color: #d8c7ff !important;
-
-  background:
-    rgba(193,79,255,.12) !important;
-
+  color: #70428f !important;
+  -webkit-text-fill-color: #70428f !important;
+  background: rgba(193, 79, 255, .12) !important;
   box-shadow:
-    0 0 6px rgba(193,79,255,.08);
+    0 0 6px rgba(193, 79, 255, .08);
 }
 
 @media (max-width: 480px) {
