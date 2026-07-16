@@ -237,22 +237,18 @@
 
 .marinarol-bottom {
   position: relative;
+  isolation: isolate;
   height: 62px;
   margin: 0 -40px;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      var(--marina-violet) 0%,
-      var(--marina-orchid) 47%,
-      var(--marina-cosmic) 100%
-    ) !important;
+  background: transparent !important;
 }
 
 .marinarol-bottom::before {
   content: "";
   position: absolute;
   inset: 0;
+
   background:
     radial-gradient(
       88px 42px at 13% 2px,
@@ -268,7 +264,14 @@
       84px 40px at 92% 5px,
       var(--marina-orchid) 0 44%,
       transparent 46%
+    ),
+    linear-gradient(
+      180deg,
+      var(--marina-violet) 0%,
+      var(--marina-orchid) 47%,
+      var(--marina-cosmic) 100%
     );
+
   clip-path: polygon(
     0 12px,
     13% 5px,
@@ -280,11 +283,36 @@
     100% 100%,
     0 100%
   );
+
   opacity: .88;
 }
 
 .marinarol-bottom::after {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--marina-violet) 0%,
+      var(--marina-orchid) 47%,
+      var(--marina-cosmic) 100%
+    );
+
+  clip-path: polygon(
+    0 12px,
+    13% 5px,
+    27% 18px,
+    45% 8px,
+    63% 22px,
+    80% 9px,
+    100% 18px,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: -1;
 }
 
 .marinarol-footer {
@@ -293,11 +321,9 @@
   right: 0;
   bottom: 18px;
   z-index: 5;
-
   text-align: center;
-  color: var(--subtitle);
+  color: var(--marina-pearl);
   font: 700 10px/1 "Cinzel", serif;
-
   text-shadow:
     0 0 8px rgba(193,79,255,.72),
     0 0 18px rgba(193,79,255,.34);
