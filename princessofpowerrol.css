@@ -26,9 +26,6 @@
     var(--dbckg5);
   border: 1px solid var(--border1);
   border-radius: 10px;
-  box-shadow:
-    0 18px 42px rgba(44, 23, 61, .38),
-    inset 0 1px 0 rgba(246, 243, 248, .22);
   overflow: hidden;
   color: var(--subtitle);
   font-family: 'Poppins', sans-serif;
@@ -212,9 +209,6 @@
     var(--dbckg3);
   border: 1px solid var(--border1);
   border-radius: 8px;
-  box-shadow:
-    0 12px 30px rgba(44, 23, 61, .26),
-    inset 0 1px 0 rgba(246, 243, 248, .16);
   color: var(--subtitle);
   font: 500 13px/1.72 'Poppins', sans-serif;
   text-align: justify;
@@ -290,25 +284,7 @@
   position: absolute;
   left: 50%;
   top: 8px;
-
-  width: 180px;
-  height: 1px;
-
   transform: translateX(-50%);
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(216,199,255,.9),
-      rgba(193,79,255,.9),
-      rgba(216,199,255,.9),
-      transparent
-    );
-
-  box-shadow:
-    0 0 8px rgba(193,79,255,.35);
-
   opacity: .85;
 }
 
