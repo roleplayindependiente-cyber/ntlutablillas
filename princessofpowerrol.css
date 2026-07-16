@@ -30,7 +30,7 @@
     0 18px 42px rgba(44, 23, 61, .38),
     inset 0 1px 0 rgba(246, 243, 248, .22);
   overflow: hidden;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .marinarol-kicker {
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 11px/1 "Cinzel", serif;
   text-align: center;
   text-transform: lowercase;
@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 13px/1 "Cinzel", serif;
 }
 
@@ -92,7 +92,7 @@
   max-width: 100%;
   padding: 0 10px 4px;
   border-bottom: 1px solid var(--border1);
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 22px/1.1 "Cinzel", serif;
   text-shadow:
     0 0 8px rgba(193, 79, 255, .75),
@@ -289,7 +289,7 @@
   z-index: 5;
 
   text-align: center;
-  color: var(--marina-pearl);
+  color: var(--subtitle);
   font: 700 10px/1 "Cinzel", serif;
 
   text-shadow:
@@ -298,43 +298,36 @@
 }
 
 .marinarol-body b,
-.marinarol-body strong,
-.marinarol-body em,
-.marinarol-body i,
-.marinarol-body u,
-.marinarol-body s,
-.marinarol-body strike,
-.marinarol-body mark {
-  color: var(--marina-violet) !important;
-}
-
-.marinarol-body b,
 .marinarol-body strong {
+  color: var(--subtitle) !important;
   font-weight: 700;
 }
 
 .marinarol-body em,
 .marinarol-body i {
+  color: inherit !important;
   font-style: italic;
 }
 
 .marinarol-body u {
-  text-decoration-color: var(--marina-orchid) !important;
+  color: inherit !important;
+  text-decoration-color: rgba(216, 199, 255, .65) !important;
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 .marinarol-body s,
 .marinarol-body strike {
-  text-decoration-color: var(--marina-orchid);
+  color: inherit !important;
+  text-decoration-color: rgba(216, 199, 255, .45);
 }
 
 .marinarol-body mark {
-  padding: 1px 3px;
-  background: rgba(193, 79, 255, .14);
+  padding: 1px 4px;
   border-radius: 3px;
+  color: var(--subtitle) !important;
+  background: rgba(216, 199, 255, .10);
 }
-
 @media (max-width: 480px) {
   .marinarol-shell {
     width: min(470px, calc(100vw - 24px));
