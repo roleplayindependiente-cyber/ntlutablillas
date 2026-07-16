@@ -102,7 +102,7 @@
 
 .marinarol-subtitle {
   margin-top: 7px;
-  color: var(--marina-lavender);
+  color: var(--subtitle);
   font: 700 12px/1.2 "Cinzel", serif;
   text-shadow: 0 0 7px rgba(139, 61, 255, .42);
   text-transform: lowercase;
@@ -297,37 +297,51 @@
     0 0 18px rgba(193,79,255,.34);
 }
 
-.marinarol-body b,
-.marinarol-body strong {
+.marinarol-shell .marinarol-body b,
+.marinarol-shell .marinarol-body b *,
+.marinarol-shell .marinarol-body strong,
+.marinarol-shell .marinarol-body strong * {
   color: var(--subtitle) !important;
+  -webkit-text-fill-color: var(--subtitle) !important;
   font-weight: 700;
 }
 
-.marinarol-body em,
-.marinarol-body i {
+.marinarol-shell .marinarol-body em,
+.marinarol-shell .marinarol-body em *,
+.marinarol-shell .marinarol-body i,
+.marinarol-shell .marinarol-body i * {
   color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
   font-style: italic;
 }
 
-.marinarol-body u {
+.marinarol-shell .marinarol-body u,
+.marinarol-shell .marinarol-body u * {
   color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
   text-decoration-color: rgba(216, 199, 255, .65) !important;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
-.marinarol-body s,
-.marinarol-body strike {
+.marinarol-shell .marinarol-body s,
+.marinarol-shell .marinarol-body s *,
+.marinarol-shell .marinarol-body strike,
+.marinarol-shell .marinarol-body strike * {
   color: inherit !important;
-  text-decoration-color: rgba(216, 199, 255, .45);
+  -webkit-text-fill-color: currentColor !important;
+  text-decoration-color: rgba(216, 199, 255, .45) !important;
 }
 
-.marinarol-body mark {
+.marinarol-shell .marinarol-body mark,
+.marinarol-shell .marinarol-body mark * {
   padding: 1px 4px;
   border-radius: 3px;
   color: var(--subtitle) !important;
-  background: rgba(216, 199, 255, .10);
+  -webkit-text-fill-color: var(--subtitle) !important;
+  background: rgba(216, 199, 255, .10) !important;
 }
+
 @media (max-width: 480px) {
   .marinarol-shell {
     width: min(470px, calc(100vw - 24px));
