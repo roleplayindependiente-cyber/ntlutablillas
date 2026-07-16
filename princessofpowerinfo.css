@@ -290,17 +290,23 @@ font-family: 'Poppins', sans-serif;
   padding: 26px 28px 28px;
   margin-bottom: 28px;
   background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(193, 79, 255, .10),
+      transparent 35%
+    ),
     linear-gradient(
       145deg,
-      rgba(246, 243, 248, .98),
-      rgba(216, 199, 255, .96)
-    ), var(--dbckg3);
+      rgba(193, 79, 255, .05),
+      rgba(139, 61, 255, .03)
+    ),
+    var(--dbckg3);
   border: 1px solid var(--border1);
   border-radius: 8px;
   box-shadow:
     0 12px 30px rgba(44, 23, 61, .26),
-    inset 0 1px 0 rgba(246, 243, 248, .92);
-  color: var(--subtitle); 
+    inset 0 1px 0 rgba(246, 243, 248, .16);
+  color: var(--title);
   font: 500 13px/1.72 'Poppins', sans-serif;
   text-align: justify;
 }
