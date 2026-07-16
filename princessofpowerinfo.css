@@ -315,8 +315,9 @@ font-family: 'Poppins', sans-serif;
       circle at 100% 0%,
       rgba(193, 79, 255, .12),
       transparent 32%
-    ), var(--dbckg3);
+    );
   pointer-events: none;
+   z-index: -1;
 }
 
 .marina-concert-bottom {
