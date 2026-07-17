@@ -931,13 +931,6 @@ border: 1px solid rgba(177, 139, 255, .22);
 }
 
 .marina-concert-body-columns {
-  position: relative;
-
-  display: flex;
-  align-items: flex-start;
-  gap: 36px;
-
-  width: 100%;
   margin: 0 0 22px;
   padding: 24px 26px;
 
@@ -960,74 +953,13 @@ border: 1px solid rgba(177, 139, 255, .22);
   color: var(--subtitle);
   font: 500 13px/1.72 "Poppins", sans-serif;
   text-align: left;
+
+  column-count: 2;
+  column-gap: 38px;
+  column-rule: 1px solid rgba(177, 139, 255, .28);
 }
 
-.marina-concert-column {
-  flex: 1 1 0;
-  width: 50%;
-  min-width: 0;
-}
-
-.marina-concert-column + .marina-concert-column {
-  padding-left: 18px;
-  border-left: 1px solid rgba(177, 139, 255, .28);
-}
-
-.marina-concert-item {
-  position: relative;
-
-  margin: 0 0 24px;
-  padding-left: 20px;
-
+.marina-concert-column-item {
   break-inside: avoid;
-}
-
-.marina-concert-item:last-child {
-  margin-bottom: 0;
-}
-
-.marina-concert-item::before {
-  content: "✧";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  color: #d95378;
-  font-weight: 700;
-}
-
-.marina-concert-body-columns b,
-.marina-concert-body-columns strong {
-  color: #d95378 !important;
-  -webkit-text-fill-color: #d95378 !important;
-  font-weight: 700;
-}
-
-.marina-concert-body-columns u {
-  color: #397faf !important;
-  -webkit-text-fill-color: #397faf !important;
-
-  text-decoration-color: rgba(124, 184, 255, .78) !important;
-  text-underline-offset: 3px;
-}
-
-@media (max-width: 620px) {
-  .marina-concert-body-columns {
-    display: block;
-    padding: 22px 20px;
-  }
-
-  .marina-concert-column {
-    width: 100%;
-  }
-
-  .marina-concert-column + .marina-concert-column {
-    margin-top: 24px;
-    padding-top: 24px;
-    padding-left: 0;
-
-    border-top: 1px solid rgba(177, 139, 255, .22);
-    border-left: 0;
-  }
+  margin: 0 0 22px;
 }
