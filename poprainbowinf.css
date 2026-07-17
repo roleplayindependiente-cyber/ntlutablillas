@@ -122,49 +122,185 @@
   text-align: center;
 }
 
-.marina-concert-name {
+.marina-concert-name,
+.marina-concert-h1 {
   position: relative;
-  display: inline-block;
+  isolation: isolate;
+  display: block;
+  width: fit-content;
   max-width: 100%;
-  padding: 0 10px 8px;
 
-  color: var(--subtitle);
-  font: 700 22px/1.1 "Cinzel", serif;
-  letter-spacing: .3px;
-  word-break: break-word;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
 
-  text-shadow:
-    0 0 8px rgba(177, 139, 255, .33),
-    0 0 17px rgba(124, 184, 255, .18),
-    0 0 25px rgba(255, 107, 138, .10);
+  background-image: linear-gradient(
+    90deg,
+    #f6f3f8 0%,
+    #d8c7ff 25%,
+    #ffffff 48%,
+    #c9b5ff 70%,
+    #f6f3f8 100%
+  );
+
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation:
+    marina-text-shine 5s linear infinite,
+    marina-neon-flicker 6s infinite;
 }
 
-.marina-concert-name::after {
+.marina-concert-name {
+  margin: 0 auto;
+  padding: 0 10px 8px;
+
+  font: 700 22px/1.1 "Cinzel", serif;
+  text-align: center;
+  word-break: break-word;
+}
+
+.marina-concert-h1 {
+  margin: 42px auto 26px;
+  padding: 0 14px 10px;
+
+  font: 700 18px/1.2 "Cinzel", serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+
+  break-after: avoid;
+}
+
+.marina-concert-name *,
+.marina-concert-h1 * {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+
+.marina-concert-name::after,
+.marina-concert-h1::after {
   content: "";
   position: absolute;
-  left: 7%;
-  right: 7%;
+
+  left: 10%;
+  right: 10%;
   bottom: 0;
+
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--pride-red),
-      var(--pride-orange),
-      var(--pride-yellow),
-      var(--pride-green),
-      var(--pride-blue),
-      var(--pride-violet),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--marina-lavender),
+    #ffffff,
+    var(--marina-orchid),
+    var(--marina-lavender),
+    transparent
+  );
 
   box-shadow:
-    0 0 6px rgba(124, 184, 255, .20),
-    0 0 10px rgba(177, 139, 255, .14);
+    0 0 4px rgba(193, 79, 255, .45),
+    0 0 10px rgba(193, 79, 255, .30),
+    0 0 18px rgba(193, 79, 255, .15);
 
-  opacity: .78;
+  opacity: .85;
+
+  animation: marina-line-pulse 3s ease-in-out infinite;
+}
+
+
+.marina-concert-name::before,
+.marina-concert-h1::before {
+  content: attr(data-title);
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  color: #c14fff;
+  -webkit-text-fill-color: #c14fff;
+
+  font: inherit;
+  text-align: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+
+  filter: blur(8px);
+  opacity: .25;
+
+  pointer-events: none;
+
+  animation: marina-halo-pulse 3s ease-in-out infinite;
+}
+
+
+@keyframes marina-text-shine {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 220% 50%;
+  }
+}
+
+
+@keyframes marina-neon-flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: .78;
+    filter: brightness(.78);
+  }
+
+  21%,
+  56% {
+    opacity: .92;
+    filter: brightness(1.18);
+  }
+}
+
+@keyframes marina-halo-pulse {
+  0%,
+  100% {
+    opacity: .18;
+    filter: blur(6px);
+  }
+
+  50% {
+    opacity: .48;
+    filter: blur(11px);
+  }
+}
+
+@keyframes marina-line-pulse {
+  0%,
+  100% {
+    opacity: .55;
+    transform: scaleX(.94);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1.04);
+  }
 }
 
 .marina-concert-subtitle {
@@ -791,5 +927,105 @@ border: 1px solid rgba(177, 139, 255, .22);
 
   .marinaconcert-bottom {
     margin-inline: -24px;
+  }
+}
+
+
+.marina-concert-body-columns {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 46px;
+
+  margin: 0 0 28px;
+  padding: 30px 32px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(193, 79, 255, .10),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(193, 79, 255, .05),
+      rgba(139, 61, 255, .03)
+    ),
+    var(--dbckg3);
+
+  border: 1px solid var(--border1);
+  border-radius: 8px;
+
+  color: var(--subtitle);
+  font: 500 13px/1.8 "Poppins", sans-serif;
+  text-align: left;
+}
+
+.marina-concert-column {
+  min-width: 0;
+}
+
+.marina-concert-body-columns::before {
+  content: "";
+  position: absolute;
+
+  top: 28px;
+  bottom: 28px;
+  left: 50%;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(216, 199, 255, .22) 15%,
+    rgba(193, 79, 255, .52) 50%,
+    rgba(216, 199, 255, .22) 85%,
+    transparent
+  );
+
+  box-shadow:
+    0 0 5px rgba(193, 79, 255, .22),
+    0 0 12px rgba(193, 79, 255, .10);
+
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.marina-concert-body-columns b,
+.marina-concert-body-columns strong {
+  color: #d94f86 !important;
+  -webkit-text-fill-color: #d94f86 !important;
+  font-weight: 700;
+}
+
+.marina-concert-body-columns u {
+  color: #478fc2 !important;
+  -webkit-text-fill-color: #478fc2 !important;
+
+  text-decoration-color: rgba(71, 143, 194, .75) !important;
+  text-underline-offset: 3px;
+}
+
+
+@media (max-width: 620px) {
+  .marina-concert-body-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    padding: 26px 22px;
+  }
+
+  .marina-concert-body-columns::before {
+    display: none;
+  }
+
+  .marina-concert-column + .marina-concert-column {
+    margin-top: 24px;
+    padding-top: 24px;
+
+    border-top: 1px solid rgba(193, 79, 255, .20);
   }
 }
