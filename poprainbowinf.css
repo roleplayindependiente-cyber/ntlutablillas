@@ -188,28 +188,29 @@
   content: "";
   position: absolute;
 
-  left: 10%;
-  right: 10%;
+  left: 8%;
+  right: 8%;
   bottom: 0;
 
   height: 1px;
 
   background: linear-gradient(
     90deg,
-    transparent,
-    var(--marina-lavender),
-    #ffffff,
-    var(--marina-orchid),
-    var(--marina-lavender),
-    transparent
+    transparent 0%,
+    var(--pride-red) 13%,
+    var(--pride-orange) 29%,
+    var(--pride-yellow) 43%,
+    var(--pride-green) 58%,
+    var(--pride-blue) 74%,
+    var(--pride-violet) 89%,
+    transparent 100%
   );
 
   box-shadow:
-    0 0 4px rgba(193, 79, 255, .45),
-    0 0 10px rgba(193, 79, 255, .30),
-    0 0 18px rgba(193, 79, 255, .15);
+    0 0 7px rgba(124, 184, 255, .22),
+    0 0 11px rgba(177, 139, 255, .14);
 
-  opacity: .85;
+  opacity: .82;
 
   animation: marina-line-pulse 3s ease-in-out infinite;
 }
@@ -930,36 +931,42 @@ border: 1px solid rgba(177, 139, 255, .22);
   }
 }
 
-
 .marina-concert-body-columns {
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
-  gap: 46px;
+  gap: 44px;
 
+  width: 100%;
   margin: 0 0 28px;
   padding: 30px 32px;
 
   background:
     radial-gradient(
-      circle at 100% 0%,
-      rgba(193, 79, 255, .10),
+      circle at 0% 0%,
+      rgba(255, 107, 138, .05),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(177, 139, 255, .07),
       transparent 35%
     ),
     linear-gradient(
       145deg,
-      rgba(193, 79, 255, .05),
-      rgba(139, 61, 255, .03)
+      rgba(255, 170, 107, .02),
+      rgba(124, 184, 255, .025),
+      rgba(177, 139, 255, .035)
     ),
     var(--dbckg3);
 
-  border: 1px solid var(--border1);
+  border: 1px solid rgba(177, 139, 255, .22);
   border-radius: 8px;
 
   color: var(--subtitle);
-  font: 500 13px/1.8 "Poppins", sans-serif;
+  font: 500 13px/1.75 "Poppins", sans-serif;
   text-align: left;
 }
 
@@ -967,53 +974,86 @@ border: 1px solid rgba(177, 139, 255, .22);
   min-width: 0;
 }
 
+.marina-concert-rule {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  align-items: start;
+  gap: 8px;
+
+  margin: 0 0 24px;
+
+  break-inside: avoid;
+}
+
+.marina-concert-rule:last-child {
+  margin-bottom: 0;
+}
+
+.marina-concert-rule-icon {
+  display: block;
+
+  color: #d95378;
+  -webkit-text-fill-color: #d95378;
+
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.marina-concert-rule-text {
+  display: block;
+  min-width: 0;
+}
+
 .marina-concert-body-columns::before {
   content: "";
   position: absolute;
 
-  top: 28px;
-  bottom: 28px;
+  top: 30px;
+  bottom: 30px;
   left: 50%;
 
   width: 1px;
 
   background: linear-gradient(
     to bottom,
-    transparent,
-    rgba(216, 199, 255, .22) 15%,
-    rgba(193, 79, 255, .52) 50%,
-    rgba(216, 199, 255, .22) 85%,
-    transparent
+    transparent 0%,
+    var(--pride-red) 14%,
+    var(--pride-orange) 29%,
+    var(--pride-yellow) 43%,
+    var(--pride-green) 58%,
+    var(--pride-blue) 74%,
+    var(--pride-violet) 88%,
+    transparent 100%
   );
 
   box-shadow:
-    0 0 5px rgba(193, 79, 255, .22),
-    0 0 12px rgba(193, 79, 255, .10);
+    0 0 6px rgba(124, 184, 255, .18),
+    0 0 10px rgba(177, 139, 255, .12);
 
+  opacity: .55;
   transform: translateX(-50%);
   pointer-events: none;
 }
 
 .marina-concert-body-columns b,
 .marina-concert-body-columns strong {
-  color: #d94f86 !important;
-  -webkit-text-fill-color: #d94f86 !important;
+  color: #d95378 !important;
+  -webkit-text-fill-color: #d95378 !important;
   font-weight: 700;
 }
 
 .marina-concert-body-columns u {
-  color: #478fc2 !important;
-  -webkit-text-fill-color: #478fc2 !important;
+  color: #397faf !important;
+  -webkit-text-fill-color: #397faf !important;
 
-  text-decoration-color: rgba(71, 143, 194, .75) !important;
+  text-decoration-color: rgba(124, 184, 255, .78) !important;
   text-underline-offset: 3px;
 }
-
 
 @media (max-width: 620px) {
   .marina-concert-body-columns {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 26px;
 
     padding: 26px 22px;
   }
@@ -1023,9 +1063,8 @@ border: 1px solid rgba(177, 139, 255, .22);
   }
 
   .marina-concert-column + .marina-concert-column {
-    margin-top: 24px;
-    padding-top: 24px;
+    padding-top: 26px;
 
-    border-top: 1px solid rgba(193, 79, 255, .20);
+    border-top: 1px solid rgba(177, 139, 255, .20);
   }
 }
