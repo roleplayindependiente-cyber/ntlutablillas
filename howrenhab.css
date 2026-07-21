@@ -555,102 +555,156 @@ body::before{
   }
 }
 
-@media(max-width:400px){
-  .howren-board{
-    padding-inline:5px;
-  }
-
-  .hero__mark{
-    width:52px;
-    flex-basis:52px;
-    font-size:23px;
-  }
-
-  .hero h1{
-    letter-spacing:.08em;
-  }
-
-  .hero__subtitle{
-    padding-inline:22px;
-    font-size:.54rem;
-  }
-
-  .hero__motto{
-    font-size:.42rem;
-  }
-
-  .room{
-    grid-template-columns:67px minmax(0,1fr);
-    gap:6px;
-    padding:10px 7px;
-  }
-
-  .room__identity{
-    padding-top:43px;
-  }
-
-  .room__identity strong{
-   font-size:5.2rem;
-  }
-
-  .room__identity p,
-  .room__identity small{
-    font-size:.39rem;
-  }
-
-  .room__members{
-    gap:5px;
-  }
-
+@media(max-width:590px){
   .resident__overlay{
-    padding:7px 5px;
+    padding:10px 8px!important;
   }
 
   .resident__overlay h2{
-    font-size:.5rem;
+    font-size:.72rem!important;
   }
 
   .resident__tag{
-    font-size:.36rem;
+    margin-bottom:8px!important;
+    font-size:.48rem!important;
   }
 
-  .resident dt{
-    font-size:.37rem;
+  .resident__overlay dl{
+    gap:6px!important;
   }
 
-  .resident dd{
-    margin-left:13px;
-    font-size:.39rem;
+  .resident__overlay dt{
+    margin-bottom:2px!important;
+    font-size:.48rem!important;
   }
 
-  .room__details{
-    padding:9px;
+  .resident__overlay dt i{
+    margin-right:3px!important;
+    font-size:.52rem!important;
   }
 
-  .room__description span,
-  .room__facts span{
-    font-size:.45rem;
-  }
-
-  .room__description p,
-  .room__facts p{
-    font-size:.47rem;
+  .resident__overlay dd{
+    font-size:.53rem!important;
+    line-height:1.2!important;
   }
 }
 
-@media(hover:none){
-  .resident:focus .resident__overlay,
-  .resident:focus-visible .resident__overlay{
-    opacity:1;
-    transform:none;
-  }
+.resident__overlay{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:18px!important;
+  text-align:center!important;
 }
 
-@media(prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    scroll-behavior:auto!important;
-    transition:none!important;
-  }
+.resident__overlay h2{
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  color:var(--gold-soft)!important;
+  font-family:"Cinzel",serif!important;
+  font-size:1rem!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  letter-spacing:.07em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+  white-space:normal!important;
+}
+
+.resident__tag{
+  width:100%!important;
+  margin:5px 0 16px!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  color:var(--blue-soft)!important;
+  font-size:.66rem!important;
+  font-weight:700!important;
+  line-height:1.2!important;
+  letter-spacing:.15em!important;
+  text-align:center!important;
+  text-transform:uppercase!important;
+}
+
+.resident__overlay dl{
+  position:relative!important;
+  display:flex!important;
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  gap:12px!important;
+  border:0!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+
+.resident__overlay dl>div{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  text-align:center!important;
+}
+
+.resident__overlay dt{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  margin:0 0 4px!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  color:var(--blue-soft)!important;
+  font-family:"Montserrat",sans-serif!important;
+  font-size:.68rem!important;
+  font-weight:700!important;
+  line-height:1.25!important;
+  letter-spacing:.04em!important;
+  text-align:center!important;
+  text-transform:none!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+  hyphens:none!important;
+}
+
+.resident__overlay dt i{
+  display:inline-block!important;
+  width:auto!important;
+  margin:0 5px 0 0!important;
+  padding:0!important;
+  color:var(--gold)!important;
+  font-size:.72rem!important;
+  vertical-align:middle!important;
+}
+
+.resident__overlay dd{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  color:#f2eee6!important;
+  font-family:"Montserrat",sans-serif!important;
+  font-size:.76rem!important;
+  font-weight:500!important;
+  line-height:1.35!important;
+  text-align:center!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
 }
