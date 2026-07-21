@@ -565,3 +565,62 @@
     transition:none;
   }
 }
+
+.howren-board .resident__name,
+.howren-board .room__details-title,
+.howren-board .room__floor,
+.howren-board .room__label,
+.howren-board .room__number{
+  font-family:"Cinzel",Georgia,serif!important;
+}
+
+.howren-board .resident__tag,
+.howren-board .resident__title,
+.howren-board .resident__value,
+.howren-board .room__description-text,
+.howren-board .room__fact-text{
+  font-family:"Montserrat",Arial,sans-serif!important;
+}
+
+.howren-board{
+  --hw-text:color-mix(in srgb,var(--title) 55%,#fff 45%);
+}
+
+.howren-board .room{
+  background:linear-gradient(135deg,color-mix(in srgb,var(--dbckg5) 68%,var(--blue) 32%),color-mix(in srgb,var(--dbckg5) 82%,var(--blue) 18%))!important;
+}
+
+.howren-board .room__details{
+  background:linear-gradient(135deg,color-mix(in srgb,var(--dbckg5) 74%,var(--blue) 26%),color-mix(in srgb,var(--dbckg5) 88%,var(--blue) 12%))!important;
+}
+
+.howren-board .room__fact,
+.howren-board .resident{
+  background:color-mix(in srgb,var(--dbckg5) 84%,var(--blue) 16%)!important;
+}
+
+.howren-board .resident__overlay{
+  background:radial-gradient(circle at top right,rgba(79,105,151,.24),transparent 45%),linear-gradient(160deg,color-mix(in srgb,var(--dbckg5) 58%,var(--blue) 42%),color-mix(in srgb,var(--dbckg5) 82%,var(--blue) 18%))!important;
+}
+
+.howren-board .resident__value,
+.howren-board .room__description-text,
+.howren-board .room__fact-text{
+  color:var(--hw-text)!important;
+}
+
+.howren-board .resident__name,
+.howren-board .room__details-title,
+.howren-board .room__floor,
+.howren-board .room__label,
+.howren-board .room__number{
+  font-family:"Cinzel",Georgia,serif!important;
+}
+
+.howren-board .resident__tag,
+.howren-board .resident__title,
+.howren-board .resident__value,
+.howren-board .room__description-text,
+.howren-board .room__fact-text{
+  font-family:"Montserrat",Arial,sans-serif!important;
+}
