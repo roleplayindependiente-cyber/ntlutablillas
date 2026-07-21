@@ -170,7 +170,6 @@ body::before{
   border-radius:11px;
   outline:none;
   background:#111820;
-  cursor:pointer;
 }
 
 .resident__photo{
