@@ -1,795 +1,483 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
 
-.howren-board{
-  --hw-blue:#4f6997;
-  --hw-blue-soft:#7892b7;
-  --hw-gold:#b59a70;
-  --hw-gold-soft:#d7c5a6;
-  --hw-line:rgba(167,185,202,.18);
-  --hw-radius:16px;
-  --hw-forum-bg:var(--dbckg3);
-  --hw-forum-text:var(--title,#e9e2d3);
-  --hw-text:color-mix(in srgb,var(--hw-forum-text) 62%,#fff 38%);
-  --photo:linear-gradient(135deg,#2a3038,#161b20);
-
-  position:relative;
-  isolation:isolate;
-  width:100%;
-  max-width:670px;
-  margin:0 auto!important;
-  padding:0 10px 30px!important;
-  overflow:hidden;
-  color:var(--hw-text)!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:16px;
-  line-height:normal;
-  text-align:left;
+:root{
+--forum-bg:var(--dbckg3);
+--hw-accent:#4f6997;
+--hw-accent-light:#7188ae;
+--hw-accent-dark:#263b5d;
+--hw-bg:color-mix(in srgb,var(--forum-bg) 82%,var(--hw-accent) 18%);
+--hw-deep:color-mix(in srgb,var(--forum-bg) 92%,var(--hw-accent) 8%);
+--hw-panel:color-mix(in srgb,var(--forum-bg) 75%,var(--hw-accent) 25%);
+--hw-cream:#e8dfcf;
+--hw-gold:#a29477;
+--hw-muted:#aaa493;
+--hw-border:rgba(174,158,124,.72);
+--hw-line:rgba(199,186,157,.48);
 }
 
-.howren-board,
-.howren-board *{
-  box-sizing:border-box;
+.Howren.ml00 {
+    position: relative;
+    width: min(650px, 100%);
+    height: 433px;
+    margin: 0 auto;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--hw-cream);
+background:
+linear-gradient(
+135deg,
+color-mix(in srgb,var(--dbckg3) 78%,var(--hw-accent) 22%),
+color-mix(in srgb,var(--dbckg3) 92%,var(--hw-accent) 8%)
+);
+    border: 1px solid rgba(174, 158, 124, .32);
 }
 
-.howren-board .rooms{
-  display:grid!important;
-  width:100%;
-  gap:16px;
-  margin:0!important;
-  padding:0!important;
+.Howren.ml00,
+.Howren.ml00 * {
+    box-sizing: border-box;
 }
 
-.howren-board .room{
-  position:relative!important;
-  display:grid!important;
-  grid-template-columns:105px minmax(0,1fr);
-  gap:14px;
-  width:100%!important;
-  margin:0!important;
-  padding:18px!important;
-  overflow:hidden;
-  border:1px solid var(--hw-line)!important;
-  border-radius:var(--hw-radius)!important;
+.Howren.ml01,
+.Howren.ml14 {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
     background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb,var(--hw-forum-bg) 86%,var(--hw-blue) 14%),
-      color-mix(in srgb,var(--hw-forum-bg) 94%,var(--hw-blue) 6%)
-    )!important;
-  box-shadow:none!important;
+        radial-gradient(circle at 50% 42%, rgba(79, 105, 151, .2), transparent 43%),
+        repeating-linear-gradient(14deg, rgba(255,255,255,.018) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(105deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px),
+        color-mix(in srgb,var(--dbckg3) 88%,var(--hw-accent) 12%);
 }
 
-.howren-board .room::after{
-  content:"";
+.Howren.ml01::after {
+ content:"";
+position:absolute;
+inset:15px;
+border:1px solid var(--hw-border);
+outline:1px solid rgba(162,148,117,.34);
+outline-offset:4px;
+}
+
+.Howren.ml01{
   position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      100deg,
-      rgba(79,105,151,.08),
-      transparent 35%,
-      rgba(181,154,112,.03)
-    );
+    inset:0;
+    z-index:2;
+    display:block;
+    overflow:hidden;
 }
 
-/* IDENTIDAD DE LA HABITACIÓN */
 
-.howren-board .room__identity{
-  position:relative!important;
-  z-index:1;
-  display:flex!important;
-  min-width:0;
-  margin:0!important;
-  padding:0!important;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  color:inherit!important;
-  text-align:center!important;
-  text-transform:uppercase;
-  background:transparent!important;
-  background-color:transparent!important;
-  background-image:none!important;
-  border:0!important;
-  border-right:1px solid rgba(167,185,202,.08)!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  pointer-events:none;
-}
-
-.howren-board .room__identity::before,
-.howren-board .room__identity::after{
-  content:none!important;
-  display:none!important;
-  background:none!important;
-  background-image:none!important;
-}
-
-.howren-board .room__floor,
-.howren-board .room__label{
-  display:block!important;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-blue-soft)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Cinzel",Georgia,serif!important;
-  font-size:.55rem!important;
-  font-weight:500!important;
-  line-height:1.2!important;
-  letter-spacing:.2em!important;
-  text-align:center!important;
-  text-transform:uppercase!important;
-}
-
-.howren-board .room:nth-child(even) .room__floor,
-.howren-board .room:nth-child(even) .room__label{
-  color:var(--hw-gold)!important;
-}
-
-.howren-board .room__line{
-  display:block!important;
-  width:58px;
-  height:1px;
-  margin:11px 0 8px!important;
-  padding:0!important;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--hw-blue-soft),
-      transparent
-    )!important;
-  border:0!important;
-}
-
-.howren-board .room__number{
-  display:block!important;
-  margin:0!important;
-  padding:0!important;
-  color:color-mix(in srgb,var(--hw-blue) 82%,transparent)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Cinzel",Georgia,serif!important;
-  font-size:4.6rem!important;
-  font-weight:600!important;
-  line-height:.88!important;
-  letter-spacing:0!important;
-  text-align:center!important;
-  text-shadow:0 4px 20px rgba(0,0,0,.4)!important;
-}
-
-.howren-board .room:nth-child(even) .room__number{
-  color:color-mix(in srgb,var(--hw-gold) 80%,transparent)!important;
-}
-
-.howren-board .room__wolf{
-  display:block!important;
-  margin:15px 0 0!important;
-  padding:0!important;
-  color:var(--hw-gold)!important;
-  background:none!important;
-  border:0!important;
-  font-size:.95rem!important;
-  line-height:1!important;
-}
-
-.howren-board .room__content{
-  position:relative!important;
-  z-index:1;
-  display:grid!important;
-  min-width:0;
-  gap:13px;
-  margin:0!important;
-  padding:0!important;
-}
-
-.howren-board .room__members{
-  display:grid!important;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  min-width:0;
-  gap:12px;
-  margin:0!important;
-  padding:0!important;
-}
-
-.howren-board .resident{
-  position:relative!important;
-  display:block!important;
-  width:100%!important;
-  aspect-ratio:235/280;
-  margin:0!important;
-  padding:0!important;
-  overflow:hidden;
-  isolation:isolate;
-  border:1px solid rgba(190,205,220,.18)!important;
-  border-radius:11px!important;
-  outline:0!important;
-  background:
-    color-mix(
-      in srgb,
-      var(--hw-forum-bg) 94%,
-      var(--hw-blue) 6%
-    )!important;
-  box-shadow:none!important;
-  cursor:default!important;
-}
-
-.howren-board .resident__photo{
-  position:absolute!important;
-  inset:0;
-  z-index:1;
-  display:block!important;
-  width:100%;
-  height:100%;
-  margin:0!important;
-  padding:0!important;
-  background:
-    linear-gradient(
-      to top,
-      rgba(3,8,12,.55),
-      transparent 48%
-    ),
-    var(--photo) center/cover no-repeat!important;
-  border:0!important;
-  transition:
-    transform .5s ease,
-    filter .5s ease;
-}
-
-.howren-board .resident__overlay{
-  position:absolute!important;
-  inset:0;
-  z-index:3;
-  display:flex!important;
-  width:100%;
-  height:100%;
-  margin:0!important;
-  padding:18px!important;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  opacity:0!important;
-  visibility:hidden!important;
-  color:var(--hw-text)!important;
-  text-align:center!important;
-  transform:translateY(10px);
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(79,105,151,.14),
-      transparent 45%
-    ),
-    linear-gradient(
-      160deg,
-      color-mix(in srgb,var(--hw-forum-bg) 78%,var(--hw-blue) 22%),
-      color-mix(in srgb,var(--hw-forum-bg) 94%,var(--hw-blue) 6%)
-    )!important;
-  border:0!important;
-  box-shadow:none!important;
-  pointer-events:none!important;
-  transition:
-    opacity .35s ease,
-    visibility .35s ease,
-    transform .35s ease;
-}
-
-.howren-board .resident__overlay::before{
-  content:"";
+.Howren.ml14 {
   position:absolute;
-  inset:7px;
-  z-index:0;
-  pointer-events:none;
-  border:1px solid rgba(181,154,112,.24);
-  clip-path:
-    polygon(
-      0 0,
-      92% 0,
-      100% 8%,
-      100% 100%,
-      8% 100%,
-      0 92%
-    );
+    inset:0;
+    z-index:3;
+    display:none;
+    padding:29px 28px 32px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:
+        radial-gradient(circle at 50% 20%,rgba(79,105,151,.18),transparent 42%),
+        repeating-linear-gradient(14deg,rgba(255,255,255,.018) 0 1px,transparent 1px 4px),
+        repeating-linear-gradient(105deg,rgba(0,0,0,.05) 0 1px,transparent 1px 6px),
+        var(--hw-bg);
+    scrollbar-color:var(--hw-accent) var(--hw-deep);
+    scrollbar-width:thin;
 }
 
-.howren-board .resident__name{
-  position:relative!important;
-  z-index:1;
-  display:block!important;
-  width:100%!important;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-gold-soft)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Cinzel",Georgia,serif!important;
-  font-size:1rem!important;
-  font-weight:600!important;
-  line-height:1.2!important;
-  letter-spacing:.07em!important;
-  text-align:center!important;
-  text-transform:uppercase!important;
-  white-space:normal!important;
-  word-break:normal!important;
-  overflow-wrap:break-word!important;
+.Howren.ml01{
+position:absolute;
+inset:0;
+z-index:2;
+opacity:1;
+visibility:visible;
+transition:.35s ease;
 }
 
-.howren-board .resident__tag{
-  position:relative!important;
-  z-index:1;
-  display:block!important;
-  width:100%!important;
-  margin:5px 0 16px!important;
-  padding:0!important;
-  color:var(--hw-blue-soft)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:.66rem!important;
-  font-weight:700!important;
-  line-height:1.2!important;
-  letter-spacing:.15em!important;
-  text-align:center!important;
-  text-transform:uppercase!important;
+.Howren.ml14{
+position:absolute;
+inset:0;
+z-index:5;
+display:block;
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+transition:.35s ease;
+  background:var(--hw-bg)!important;
 }
 
-.howren-board .resident__data{
-  position:relative!important;
-  z-index:1;
-  display:flex!important;
-  width:100%!important;
-  min-width:0;
-  margin:0!important;
-  padding:0!important;
-  flex-direction:column;
-  align-items:stretch;
-  gap:12px;
-  background:none!important;
-  border:0!important;
+.Howren.ml00:hover>.Howren.ml01,
+.Howren.ml00:focus-within>.Howren.ml01{
+opacity:0;
+visibility:hidden;
+pointer-events:none;
 }
 
-.howren-board .resident__field{
-  display:block!important;
-  width:100%!important;
-  min-width:0;
-  margin:0!important;
-  padding:0!important;
-  color:inherit!important;
-  background:none!important;
-  border:0!important;
-  text-align:center!important;
+.Howren.ml00:hover>.Howren.ml14,
+.Howren.ml00:focus-within>.Howren.ml14{
+opacity:1;
+visibility:visible;
+pointer-events:auto;
 }
 
-.howren-board .resident__title{
-  display:flex!important;
-  width:100%!important;
-  min-width:0;
-  margin:0 0 4px!important;
-  padding:0!important;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-  color:var(--hw-blue-soft)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:.68rem!important;
-  font-weight:700!important;
-  line-height:1.25!important;
-  letter-spacing:.04em!important;
-  text-align:center!important;
-  text-transform:none!important;
-  white-space:normal!important;
-  word-break:normal!important;
-  overflow-wrap:normal!important;
-  hyphens:none!important;
+.Howren.ml14::-webkit-scrollbar {
+    width: 7px;
 }
 
-.howren-board .resident__icon{
-  display:inline-block!important;
-  flex:0 0 auto;
-  width:auto!important;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-gold)!important;
-  background:none!important;
-  border:0!important;
-  font-size:.72rem!important;
-  line-height:1!important;
+.Howren.ml14::-webkit-scrollbar-track{
+background:color-mix(in srgb,var(--forum-bg) 94%,var(--hw-accent) 6%);
 }
 
-.howren-board .resident__value{
-  display:block!important;
-  width:100%!important;
-  min-width:0;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-text)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:.76rem!important;
-  font-weight:500!important;
-  line-height:1.35!important;
-  letter-spacing:0!important;
-  text-align:center!important;
-  text-transform:none!important;
-  white-space:normal!important;
-  word-break:normal!important;
-  overflow-wrap:break-word!important;
-  hyphens:none!important;
+.Howren.ml14::-webkit-scrollbar-thumb {
+    background: var(--hw-accent);
+    border-radius: 10px;
 }
 
-.howren-board .resident:hover .resident__photo{
-  transform:scale(1.06);
-  filter:brightness(.38) saturate(.75);
+.Howren.ml02 {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transform: translateX(-50%);
+    color: var(--hw-muted);
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 3px;
 }
 
-.howren-board .resident:hover .resident__overlay{
-  opacity:1!important;
-  visibility:visible!important;
-  transform:none;
+.Howren.ml02 i {
+    position: relative;
+    width: 32px;
+    height: 25px;
 }
 
-.howren-board .room__details{
-  display:grid!important;
-  gap:11px;
-  margin:0!important;
-  padding:14px 15px!important;
-  border:1px solid rgba(167,185,202,.13)!important;
-  border-radius:11px!important;
-  background:
-    linear-gradient(
-      135deg,
-      color-mix(in srgb,var(--hw-forum-bg) 88%,var(--hw-blue) 12%),
-      color-mix(in srgb,var(--hw-forum-bg) 96%,var(--hw-blue) 4%)
-    )!important;
-  box-shadow:none!important;
+.Howren.ml02 i::before,
+.Howren.ml02 i::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    width: 30px;
+    height: 1px;
+    background: var(--hw-accent-light);
 }
 
-.howren-board .room__description{
-  position:relative!important;
-  display:block!important;
-  min-height:95px;
-  margin:0!important;
-  padding:0 0 0 12px!important;
-  background:none!important;
-  border:0!important;
-  border-left:2px solid rgba(181,154,112,.65)!important;
+.Howren.ml02 i::before { transform: rotate(45deg); }
+.Howren.ml02 i::after { transform: rotate(-45deg); }
+
+.Howren.ml03 {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
 }
 
-.howren-board .room__details-title{
-  display:block!important;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-gold)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Cinzel",Georgia,serif!important;
-  font-size:.78rem!important;
-  font-weight:600!important;
-  line-height:1.25!important;
-  letter-spacing:.18em!important;
-  text-align:left!important;
-  text-transform:uppercase!important;
+.Howren.ml03 h1 {
+    margin: 0;
+    color: var(--hw-cream);
+    font: 400 clamp(48px, 9.4vw, 68px)/.95 Graduate, Georgia, serif;
+    letter-spacing: 3px;
+    text-shadow:
+        1px 1px var(--hw-deep),
+        2px 2px var(--hw-gold),
+        4px 5px 8px rgba(0,0,0,.5);
 }
 
-.howren-board .room__description-text{
-  display:block!important;
-  width:100%;
-  height:65px;
-  margin:5px 0 0!important;
-  padding:0 4px 0 0!important;
-  overflow-x:hidden!important;
-  overflow-y:auto!important;
-  color:var(--hw-text)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:.92rem!important;
-  font-weight:400!important;
-  line-height:1.55!important;
-  letter-spacing:0!important;
-  text-align:left!important;
-  text-transform:none!important;
-  word-spacing:normal!important;
-  white-space:normal!important;
-  word-break:normal!important;
-  overflow-wrap:break-word!important;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  overscroll-behavior:contain;
+.Howren.ml03 p {
+    margin: 13px 0 0;
+    color: #cbc0ab;
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2.2px;
 }
 
-.howren-board .room__description-text::-webkit-scrollbar{
-  display:none;
-  width:0;
-  height:0;
+.Howren.ml04 {
+    position: absolute;
+    top: 172px;
+    right: 45px;
+    left: 45px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 105px 1fr 105px;
+    align-items: center;
+    gap: 14px;
 }
 
-.howren-board .room__facts{
-  display:grid!important;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:9px;
-  margin:0!important;
-  padding:0!important;
+.Howren.ml05,
+.Howren.ml10 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #c8bea9;
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2px;
 }
 
-.howren-board .room__fact{
-  position:relative!important;
-  display:block!important;
-  min-width:0;
-  margin:0!important;
-  padding:10px 10px 10px 32px!important;
-  color:var(--hw-text)!important;
-  background:
-    color-mix(
-      in srgb,
-      var(--hw-forum-bg) 94%,
-      var(--hw-blue) 6%
-    )!important;
-  border:1px solid rgba(167,185,202,.1)!important;
-  border-radius:8px!important;
-  box-shadow:none!important;
+.Howren.ml05 { text-align: right; }
+.Howren.ml10 { text-align: left; }
+
+.Howren.ml05 span::after,
+.Howren.ml10 span::after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 1px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, var(--hw-line), var(--hw-accent));
 }
 
-.howren-board .room__fact-icon{
-  position:absolute!important;
-  top:11px;
-  left:10px;
-  display:block!important;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-blue-soft)!important;
-  background:none!important;
-  border:0!important;
-  font-size:.72rem!important;
-  line-height:1!important;
+.Howren.ml05 span::after {
+    margin-left: auto;
+    background: linear-gradient(90deg, var(--hw-accent), var(--hw-line));
 }
 
-.howren-board .room__fact-text{
-  display:block!important;
-  margin:4px 0 0!important;
-  padding:0!important;
-  color:var(--hw-text)!important;
-  background:none!important;
-  border:0!important;
-  font-family:"Montserrat",Arial,sans-serif!important;
-  font-size:.85rem!important;
-  font-weight:400!important;
-  line-height:1.45!important;
-  letter-spacing:0!important;
-  text-align:left!important;
-  text-transform:none!important;
-  white-space:normal!important;
-  word-break:normal!important;
-  overflow-wrap:break-word!important;
+.Howren.ml06 {
+    position: relative;
+    display: grid;
+    min-height: 166px;
+    place-items: center;
 }
 
-.howren-board .footer{
-  display:flex!important;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  margin:0!important;
-  padding:30px 6px 0!important;
-  color:var(--hw-gold)!important;
-  background:none!important;
-  border:0!important;
-  pointer-events:none;
+.Howren.ml08 {
+    position: relative;
+    z-index: 2;
+    width: 155px;
+    height: 155px;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 8px 9px rgba(0,0,0,.5))
+        sepia(.08);
+    transition: transform .55s ease, filter .55s ease;
 }
 
-.howren-board .footer__line{
-  display:block!important;
-  width:45px;
-  height:1px;
-  margin:0!important;
-  padding:0!important;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--hw-gold)
-    )!important;
-  border:0!important;
+.Howren.ml00:hover .Howren.ml08 {
+    transform: scale(1.04);
 }
 
-.howren-board .footer__paw{
-  display:block!important;
-  flex:0 0 auto;
-  margin:0!important;
-  padding:0!important;
-  color:var(--hw-gold)!important;
-  background:none!important;
-  border:0!important;
-  font-size:.78rem!important;
-  line-height:1!important;
+.Howren.ml11 {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+    text-align: center;
 }
 
-@media(max-width:590px){
-  .howren-board{
-    padding:0 7px 25px!important;
-  }
-
-  .howren-board .room{
-    grid-template-columns:82px minmax(0,1fr);
-    gap:9px;
-    padding:12px 10px!important;
-    border-radius:13px!important;
-  }
-
-  .howren-board .room__floor,
-  .howren-board .room__label{
-    font-size:.45rem!important;
-    letter-spacing:.16em!important;
-  }
-
-  .howren-board .room__line{
-    width:45px;
-    margin:8px 0 6px!important;
-  }
-
-  .howren-board .room__number{
-    font-size:3.45rem!important;
-  }
-
-  .howren-board .room__wolf{
-    margin-top:11px!important;
-    font-size:.75rem!important;
-  }
-
-  .howren-board .room__members{
-    gap:7px;
-  }
-
-  .howren-board .resident{
-    border-radius:8px!important;
-  }
-
-  .howren-board .resident__overlay{
-    padding:10px 8px!important;
-  }
-
-  .howren-board .resident__overlay::before{
-    inset:4px;
-  }
-
-  .howren-board .resident__name{
-    font-size:.72rem!important;
-  }
-
-  .howren-board .resident__tag{
-    margin-bottom:8px!important;
-    font-size:.48rem!important;
-  }
-
-  .howren-board .resident__data{
-    gap:6px;
-  }
-
-  .howren-board .resident__title{
-    margin-bottom:2px!important;
-    gap:3px;
-    font-size:.48rem!important;
-  }
-
-  .howren-board .resident__icon{
-    font-size:.52rem!important;
-  }
-
-  .howren-board .resident__value{
-    font-size:.53rem!important;
-    line-height:1.2!important;
-  }
-
-  .howren-board .room__details{
-    padding:11px!important;
-  }
-
-  .howren-board .room__description{
-    min-height:82px;
-  }
-
-  .howren-board .room__details-title{
-    font-size:.58rem!important;
-    letter-spacing:.13em!important;
-  }
-
-  .howren-board .room__description-text{
-    height:56px;
-    font-size:.66rem!important;
-    line-height:1.4!important;
-  }
-
-  .howren-board .room__facts{
-    grid-template-columns:1fr;
-  }
-
-  .howren-board .room__fact-text{
-    font-size:.64rem!important;
-    line-height:1.35!important;
-  }
-
-  .howren-board .footer{
-    gap:8px;
-    padding-top:24px!important;
-  }
-
-  .howren-board .footer__line{
-    width:25px;
-  }
+.Howren.ml12,
+.Howren.ml13 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media(max-width:400px){
-  .howren-board{
-    padding-inline:5px!important;
-  }
-
-  .howren-board .room{
-    grid-template-columns:67px minmax(0,1fr);
-    gap:6px;
-    padding:10px 7px!important;
-  }
-
-  .howren-board .room__number{
-    font-size:2.85rem!important;
-  }
-
-  .howren-board .room__floor,
-  .howren-board .room__label{
-    font-size:.39rem!important;
-  }
-
-  .howren-board .room__members{
-    gap:5px;
-  }
-
-  .howren-board .resident__overlay{
-    padding:7px 5px!important;
-  }
-
-  .howren-board .resident__name{
-    font-size:.57rem!important;
-  }
-
-  .howren-board .resident__tag{
-    font-size:.38rem!important;
-  }
-
-  .howren-board .resident__title{
-    font-size:.39rem!important;
-  }
-
-  .howren-board .resident__icon{
-    font-size:.42rem!important;
-  }
-
-  .howren-board .resident__value{
-    font-size:.42rem!important;
-  }
-
-  .howren-board .room__details{
-    padding:9px!important;
-  }
-
-  .howren-board .room__details-title{
-    font-size:.48rem!important;
-  }
-
-  .howren-board .room__description-text,
-  .howren-board .room__fact-text{
-    font-size:.52rem!important;
-  }
+.Howren.ml12 {
+    gap: 17px;
 }
 
-@media(prefers-reduced-motion:reduce){
-  .howren-board .resident__photo,
-  .howren-board .resident__overlay{
-    transition:none!important;
-  }
+.Howren.ml12 h2 {
+    margin: 0;
+    font: 500 28px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 5px;
+    text-shadow: 0 4px 7px rgba(0,0,0,.48);
 }
 
+.Howren.ml12 i {
+    position: relative;
+    width: 78px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hw-gold));
+}
+
+.Howren.ml12 i:last-child {
+    transform: scaleX(-1);
+}
+
+.Howren.ml12 i::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    background: var(--hw-accent);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.Howren.ml13 {
+    gap: 14px;
+    margin-top: 11px;
+}
+
+.Howren.ml13 span {
+    width: 75px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hw-accent));
+}
+
+.Howren.ml13 span:last-child {
+    transform: scaleX(-1);
+}
+
+.Howren.ml13 b {
+    color: var(--hw-accent-light);
+    font-size: 17px;
+    filter: grayscale(.2);
+}
+
+.Howren.ml11 small {
+    display: block;
+    margin-top: 7px;
+    color: var(--hw-accent-light);
+    font: 600 6px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.Howren.ml15 {
+  position:relative;
+z-index:2;
+margin:0 9px 25px;
+padding:24px 30px;
+text-align:center;
+background:linear-gradient(90deg,rgba(79,105,151,.16),rgba(79,105,151,.4),rgba(79,105,151,.16)),var(--hw-panel);
+border:1px solid rgba(113,136,174,.72);
+border-radius:6px;
+}
+
+.Howren.ml15 span,
+.Howren.ml15 p {
+    display: block;
+    margin: 0;
+    color: #c9d1e0;
+    font: 600 7px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2.2px;
+}
+
+.Howren.ml15 h2 {
+margin:0;
+color:var(--hw-cream);
+font:500 30px/1 "Playfair Display",Georgia,serif;
+letter-spacing:5px;
+}
+
+.Howren.ml16{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:17px 14px;
+    width:100%;
+    padding:0 8px 8px;
+}
+
+.Howren.ml17{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    overflow:hidden;
+    background:color-mix(in srgb,var(--forum-bg) 92%,var(--hw-accent) 8%);
+    border:1px solid rgba(162,148,119,.9);
+    border-radius:13px;
+}
+
+.Howren.ml17:hover{
+    border-color:var(--hw-accent-light);
+}
+
+.Howren.ml17>img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center top;
+    flex:0 0 auto;
+    filter:saturate(.88) contrast(1.04);
+    transform:none;
+    transition:none;
+}
+
+.Howren.ml18{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex:1;
+    min-height:72px;
+    padding:10px 7px;
+    text-align:center;
+    background:
+        linear-gradient(90deg,transparent,rgba(79,105,151,.23),transparent),
+        color-mix(in srgb,var(--forum-bg) 90%,var(--hw-accent) 10%);
+    border-top:1px solid rgba(79,105,151,.75);
+}
+
+.Howren.ml18 strong,
+.Howren.ml18 span{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:0;
+    overflow-wrap:normal;
+    word-break:normal;
+    white-space:normal;
+    hyphens:none;
+}
+
+.Howren.ml18 strong{
+    color:var(--hw-cream);
+    font:500 15px/1.2 "Playfair Display",Georgia,serif;
+    letter-spacing:.1px;
+    text-shadow:0 2px 4px rgba(0,0,0,.72);
+}
+
+.Howren.ml18 span{
+    margin-top:7px;
+    color:#b7c5dc;
+    font:600 8px/1.3 Montserrat,Arial,sans-serif;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+@media (max-width: 560px) {
+    .Howren.ml00 {
+        height: 433px;
+    }
+
+    .Howren.ml04 {
+        right: 25px;
+        left: 25px;
+        grid-template-columns: 78px 1fr 78px;
+    }
+
+    .Howren.ml05,
+    .Howren.ml10 {
+        letter-spacing: 1px;
+    }
+
+    .Howren.ml05 span::after,
+    .Howren.ml10 span::after {
+        width: 54px;
+    }
+
+    .Howren.ml12 h2 {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .Howren.ml12 i {
+        width: 48px;
+    }
+
+    .Howren.ml16 {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 370px) {
+    .Howren.ml16 {
+        grid-template-columns: minmax(150px, 1fr);
+    }
+}
