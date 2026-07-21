@@ -12,6 +12,8 @@
   --hw-text:color-mix(in srgb,var(--hw-forum-text) 62%,#fff 38%);
   --photo:linear-gradient(135deg,#2a3038,#161b20);
 
+  container-type:inline-size;
+  container-name:howren-residencias;
   position:relative;
   isolation:isolate;
   width:100%;
@@ -601,4 +603,44 @@
   border:0!important;
   font-size:.78rem!important;
   line-height:1!important;
+}
+
+@container howren-residencias (max-width:400px){
+  .howren-board .room{
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+
+  .howren-board .room__identity{
+    min-height:auto;
+    padding:9px!important;
+    flex-direction:row;
+    justify-content:center;
+    gap:8px;
+    border-right:0!important;
+    border-bottom:1px solid rgba(167,185,202,.08)!important;
+  }
+
+  .howren-board .room__line,
+  .howren-board .room__wolf{
+    display:none!important;
+  }
+
+  .howren-board .room__number{
+    font-size:1.8rem!important;
+    line-height:1!important;
+  }
+
+  .howren-board .room__floor,
+  .howren-board .room__label{
+    font-size:.43rem!important;
+  }
+
+  .howren-board .room__members{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .howren-board .room__facts{
+    grid-template-columns:1fr;
+  }
 }
