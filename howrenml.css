@@ -2,6 +2,10 @@
 
 :root{
 --hw-accent:#4f6997;
+--hw-accent-light:#7188ae;
+--hw-accent-dark:#263b5d;
+--hw-forum-bg:#1b1b1b;
+--hw-forum-text:#e8dfcf;
 --hw-cream:#e8dfcf;
 --hw-gold:#a29477;
 --hw-border:rgba(174,158,124,.72);
@@ -9,13 +13,11 @@
 }
 
 .Howren.ml00{
---hw-forum-bg: var(#1b1b1b, #0d1926);
---hw-forum-text:var(#fafafa,#e8dfcf);
 --hw-bg:color-mix(in srgb,var(--hw-forum-bg) 82%,var(--hw-accent) 18%);
 --hw-deep:color-mix(in srgb,var(--hw-forum-bg) 92%,var(--hw-accent) 8%);
 --hw-panel:color-mix(in srgb,var(--hw-forum-bg) 75%,var(--hw-accent) 25%);
---hw-text:color-mix(in srgb,var(--hw-forum-text) 82%,var(--hw-accent) 18%);
---hw-text-soft:color-mix(in srgb,var(--hw-forum-text) 68%,var(--hw-accent) 32%);
+--hw-text:var(--hw-cream);
+--hw-text-soft:#c8bea9;
 position:relative;
 isolation:isolate;
 width:min(650px,100%);
@@ -312,20 +314,20 @@ background:linear-gradient(90deg,transparent,var(--hw-accent));
 }
 
 .Howren.ml13 b{
-color:#4f6997;
+color:var(--hw-accent);
 font-size:17px;
 line-height:1;
 filter:none;
-text-shadow:0 1px 2px color-mix(in srgb,var(--hw-forum-bg) 70%,transparent);
+text-shadow:0 1px 2px rgba(0,0,0,.45);
 }
 
 .Howren.ml11 small{
 display:block;
 margin-top:7px;
-color:var(--hw-accent);
+color:var(--hw-accent-light);
 font:600 6px/1 Montserrat,Arial,sans-serif;
 letter-spacing:2px;
-text-shadow:0 1px 2px color-mix(in srgb,var(--hw-forum-bg) 75%,transparent);
+text-shadow:0 1px 2px rgba(0,0,0,.45);
 }
 
 .Howren.ml15{
