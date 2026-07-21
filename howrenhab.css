@@ -258,20 +258,21 @@
   color:var(--hw-text)!important;
   text-align:center!important;
   transform:translateY(10px);
+
   background:
-    radial-gradient(
-      circle at top right,
-      rgba(79,105,151,.14),
-      transparent 45%
-    ),
     linear-gradient(
-      160deg,
-      color-mix(in srgb,var(--hw-forum-bg) 78%,var(--hw-blue) 22%),
-      color-mix(in srgb,var(--hw-forum-bg) 94%,var(--hw-blue) 6%)
+      180deg,
+      rgba(10,10,10,.48),
+      rgba(5,5,5,.72)
     )!important;
+
   border:0!important;
   box-shadow:none!important;
   pointer-events:none!important;
+
+  backdrop-filter:blur(1px);
+  -webkit-backdrop-filter:blur(1px);
+
   transition:
     opacity .35s ease,
     visibility .35s ease,
@@ -284,16 +285,8 @@
   inset:7px;
   z-index:0;
   pointer-events:none;
-  border:1px solid rgba(181,154,112,.24);
-  clip-path:
-    polygon(
-      0 0,
-      92% 0,
-      100% 8%,
-      100% 100%,
-      8% 100%,
-      0 92%
-    );
+  border:1px solid rgba(181,154,112,.28);
+  clip-path:polygon(0 0,92% 0,100% 8%,100% 100%,8% 100%,0 92%);
 }
 
 .howren-board .resident__name{
@@ -425,8 +418,8 @@
 }
 
 .howren-board .resident:hover .resident__photo{
-  transform:scale(1.06);
-  filter:brightness(.38) saturate(.75);
+  transform:scale(1.04);
+  filter:brightness(.62) saturate(.82) contrast(1.04);
 }
 
 .howren-board .resident:hover .resident__overlay{
