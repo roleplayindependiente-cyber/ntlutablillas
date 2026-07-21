@@ -11,8 +11,8 @@
 }
 
 .Howren.ml00{
---hw-forum-bg:var(--dbckg3,#0d1926);
---hw-forum-text:var(--title,#e8dfcf);
+--hw-forum-bg: var(#1b1b1b, #0d1926);
+--hw-forum-text:var(#fafafa,#e8dfcf);
 --hw-bg:color-mix(in srgb,var(--hw-forum-bg) 82%,var(--hw-accent) 18%);
 --hw-deep:color-mix(in srgb,var(--hw-forum-bg) 92%,var(--hw-accent) 8%);
 --hw-panel:color-mix(in srgb,var(--hw-forum-bg) 75%,var(--hw-accent) 25%);
