@@ -81,10 +81,23 @@ body::before{
   min-width:0;
   flex-direction:column;
   align-items:center;
-  justify-content:flex-start;
-  padding-top:72px;
+  justify-content:center;
+  padding-top:0;
   text-align:center;
   text-transform:uppercase;
+  background:#172432!important;
+  background-color:#172432!important;
+  background-image:none!important;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.room__identity::before,
+.room__identity::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  background-image:none!important;
 }
 
 .room__identity p,
