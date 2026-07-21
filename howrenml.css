@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+    --hw-accent: #4f6997;
+    --hw-accent-light: #7188ae;
+    --hw-accent-dark: #263b5d;
+--hw-bg: color-mix(in srgb,var(--dbckg3) 82%,var(--hw-accent) 18%);
+--hw-deep: color-mix(in srgb,var(--dbckg3) 92%,var(--hw-accent) 8%);
+--hw-panel: color-mix(in srgb,var(--dbckg3) 75%,var(--hw-accent) 25%);
+    --hw-cream: #e8dfcf;
+    --hw-gold: #a29477;
+    --hw-muted: #aaa493;
+    --hw-border: rgba(174, 158, 124, .72);
+    --hw-line: rgba(199, 186, 157, .48);
+}
+
+.Howren.ml00 {
+    position: relative;
+    width: min(650px, 100%);
+    height: 433px;
+    margin: 0 auto;
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--hw-cream);
+background:
+linear-gradient(
+135deg,
+color-mix(in srgb,var(--dbckg3) 78%,var(--hw-accent) 22%),
+color-mix(in srgb,var(--dbckg3) 92%,var(--hw-accent) 8%)
+);
+    border: 1px solid rgba(174, 158, 124, .32);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, .42);
+}
+
+.Howren.ml00,
+.Howren.ml00 * {
+    box-sizing: border-box;
+}
+
+.Howren.ml01,
+.Howren.ml14 {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 42%, rgba(79, 105, 151, .2), transparent 43%),
+        repeating-linear-gradient(14deg, rgba(255,255,255,.018) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(105deg, rgba(0,0,0,.05) 0 1px, transparent 1px 6px),
+        color-mix(in srgb,var(--dbckg3) 88%,var(--hw-accent) 12%);
+}
+
+.Howren.ml01::after,
+.Howren.ml14::after {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    z-index: 0;
+    pointer-events: none;
+    border: 1px solid var(--hw-border);
+    outline: 1px solid rgba(162, 148, 117, .34);
+    outline-offset: 4px;
+}
+
+.Howren.ml01 {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition:
+        opacity .5s ease,
+        transform .65s ease,
+        visibility .5s;
+}
+
+.Howren.ml14 {
+    z-index: 3;
+    padding: 29px 28px 32px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.035);
+    pointer-events: none;
+    scrollbar-color: var(--hw-accent) var(--hw-deep);
+    scrollbar-width: thin;
+    transition:
+        opacity .5s ease,
+        transform .65s ease,
+        visibility .5s;
+}
+
+.Howren.ml00:hover .Howren.ml01,
+.Howren.ml00:focus .Howren.ml01,
+.Howren.ml00:focus-within .Howren.ml01 {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.96);
+}
+
+.Howren.ml00:hover .Howren.ml14,
+.Howren.ml00:focus .Howren.ml14,
+.Howren.ml00:focus-within .Howren.ml14 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.Howren.ml14::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Howren.ml14::-webkit-scrollbar-track {
+background:
+color-mix(in srgb,var(--dbckg3) 94%,var(--hw-accent) 6%);
+}
+}
+
+.Howren.ml14::-webkit-scrollbar-thumb {
+    background: var(--hw-accent);
+    border-radius: 10px;
+}
+
+.Howren.ml02 {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transform: translateX(-50%);
+    color: var(--hw-muted);
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.Howren.ml02 i {
+    position: relative;
+    width: 32px;
+    height: 25px;
+}
+
+.Howren.ml02 i::before,
+.Howren.ml02 i::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    width: 30px;
+    height: 1px;
+    background: var(--hw-accent-light);
+}
+
+.Howren.ml02 i::before { transform: rotate(45deg); }
+.Howren.ml02 i::after { transform: rotate(-45deg); }
+
+.Howren.ml03 {
+    position: absolute;
+    top: 59px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.Howren.ml03 h1 {
+    margin: 0;
+    color: var(--hw-cream);
+    font: 400 clamp(48px, 9.4vw, 68px)/.95 Graduate, Georgia, serif;
+    letter-spacing: 3px;
+    text-shadow:
+        1px 1px var(--hw-deep),
+        2px 2px var(--hw-gold),
+        4px 5px 8px rgba(0,0,0,.5);
+}
+
+.Howren.ml03 p {
+    margin: 13px 0 0;
+    color: #cbc0ab;
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2.2px;
+}
+
+.Howren.ml04 {
+    position: absolute;
+    top: 172px;
+    right: 45px;
+    left: 45px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 105px 1fr 105px;
+    align-items: center;
+    gap: 14px;
+}
+
+.Howren.ml05,
+.Howren.ml10 {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #c8bea9;
+    font: 600 8px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.Howren.ml05 { text-align: right; }
+.Howren.ml10 { text-align: left; }
+
+.Howren.ml05 span::after,
+.Howren.ml10 span::after {
+    content: "";
+    display: block;
+    width: 76px;
+    height: 1px;
+    margin-top: 8px;
+    background: linear-gradient(90deg, var(--hw-line), var(--hw-accent));
+}
+
+.Howren.ml05 span::after {
+    margin-left: auto;
+    background: linear-gradient(90deg, var(--hw-accent), var(--hw-line));
+}
+
+.Howren.ml06 {
+    position: relative;
+    display: grid;
+    min-height: 166px;
+    place-items: center;
+}
+
+.Howren.ml08 {
+    position: relative;
+    z-index: 2;
+    width: 155px;
+    height: 155px;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 8px 9px rgba(0,0,0,.5))
+        sepia(.08);
+    transition: transform .55s ease, filter .55s ease;
+}
+
+.Howren.ml00:hover .Howren.ml08 {
+    transform: scale(1.04);
+}
+
+.Howren.ml07,
+.Howren.ml09 {
+    position: absolute;
+    bottom: 8px;
+    width: 35px;
+    height: 145px;
+    overflow-wrap: anywhere;
+    color: var(--hw-accent);
+    font: 28px/.72 Georgia, serif;
+    opacity: .92;
+}
+
+.Howren.ml07 {
+    left: 25px;
+    transform: rotate(-25deg);
+}
+
+.Howren.ml09 {
+    right: 25px;
+    transform: rotate(25deg) scaleX(-1);
+}
+
+.Howren.ml11 {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+}
+
+.Howren.ml12,
+.Howren.ml13 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Howren.ml12 {
+    gap: 17px;
+}
+
+.Howren.ml12 h2 {
+    margin: 0;
+    font: 500 28px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 5px;
+    text-shadow: 0 4px 7px rgba(0,0,0,.48);
+}
+
+.Howren.ml12 i {
+    position: relative;
+    width: 78px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hw-gold));
+}
+
+.Howren.ml12 i:last-child {
+    transform: scaleX(-1);
+}
+
+.Howren.ml12 i::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    background: var(--hw-accent);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.Howren.ml13 {
+    gap: 14px;
+    margin-top: 11px;
+}
+
+.Howren.ml13 span {
+    width: 75px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hw-accent));
+}
+
+.Howren.ml13 span:last-child {
+    transform: scaleX(-1);
+}
+
+.Howren.ml13 b {
+    color: var(--hw-accent-light);
+    font-size: 17px;
+    filter: grayscale(.2);
+}
+
+.Howren.ml11 small {
+    display: block;
+    margin-top: 7px;
+    color: var(--hw-accent-light);
+    font: 600 6px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.Howren.ml15 {
+    position: relative;
+    z-index: 2;
+    margin: 0 9px 25px;
+    padding: 15px 55px 14px;
+    overflow: hidden;
+    text-align: center;
+  background:
+linear-gradient(
+90deg,
+transparent,
+rgba(113,136,174,.22),
+transparent
+),
+color-mix(in srgb,var(--dbckg3) 72%,var(--hw-accent) 28%);
+    border: 1px solid rgba(113,136,174,.72);
+    border-radius: 5px;
+    box-shadow:
+        inset 0 0 25px rgba(0,0,0,.28),
+        0 9px 18px rgba(0,0,0,.25);
+}
+
+.Howren.ml15::before,
+.Howren.ml15::after {
+    content: "❧";
+    position: absolute;
+    top: 50%;
+    color: var(--hw-accent-light);
+    font-size: 30px;
+    opacity: .9;
+}
+
+.Howren.ml15::before {
+    left: 19px;
+    transform: translateY(-50%);
+}
+
+.Howren.ml15::after {
+    right: 19px;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.Howren.ml15 span,
+.Howren.ml15 p {
+    display: block;
+    margin: 0;
+    color: #c9d1e0;
+    font: 600 7px/1 Montserrat, Arial, sans-serif;
+    letter-spacing: 2.2px;
+}
+
+.Howren.ml15 h2 {
+    margin: 5px 0 7px;
+    color: var(--hw-cream);
+    font: 500 27px/1 "Playfair Display", Georgia, serif;
+    letter-spacing: 5px;
+}
+
+.Howren.ml16 {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 17px 14px;
+    padding: 0 8px 5px;
+}
+
+.Howren.ml17 {
+       min-width: 150px;
+    overflow: hidden;
+  background:
+color-mix(in srgb,var(--dbckg3) 92%,var(--hw-accent) 8%);
+    border: 1px solid rgba(162,148,119,.9);
+    border-radius: 13px;
+    box-shadow:
+        0 9px 18px rgba(0,0,0,.36),
+        inset 0 0 0 1px rgba(255,255,255,.04);
+}
+
+.Howren.ml17:hover {
+ border-color: var(--hw-accent-light);
+}
+
+.Howren.ml17 img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(.88) contrast(1.04);
+}
+
+.Howren.ml17 footer {
+    min-height: 61px;
+    padding: 9px 5px 8px;
+    text-align: center;
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(79,105,151,.23),
+transparent
+),
+color-mix(in srgb,var(--dbckg3) 90%,var(--hw-accent) 10%);
+    border-top: 1px solid rgba(79,105,151,.75);
+}
+
+.Howren.ml17 strong,
+.Howren.ml17 span{
+    display:block;
+    max-width:100%;
+    overflow-wrap:break-word;
+    word-break:normal;
+    hyphens:none;
+}
+
+.Howren.ml17 strong{
+    color:var(--hw-cream);
+    font:500 clamp(15px,2vw,17px)/1.2 "Playfair Display",Georgia,serif;
+    letter-spacing:.2px;
+    text-shadow:0 2px 4px rgba(0,0,0,.72);
+}
+
+.Howren.ml17 span{
+    margin-top:7px;
+    color:#b7c5dc;
+    font:600 clamp(8px,1.35vw,9px)/1.35 Montserrat,Arial,sans-serif;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.Howren.ml17 footer{
+    min-height:72px;
+    padding:11px 7px 10px;
+    text-align:center;
+    background:
+        linear-gradient(90deg,transparent,rgba(79,105,151,.23),transparent),
+        color-mix(in srgb,var(--dbckg3) 90%,var(--hw-accent) 10%);
+    border-top:1px solid rgba(79,105,151,.75);
+}
+
+@media (max-width: 560px) {
+    .Howren.ml00 {
+        height: 433px;
+    }
+
+    .Howren.ml04 {
+        right: 25px;
+        left: 25px;
+        grid-template-columns: 78px 1fr 78px;
+    }
+
+    .Howren.ml05,
+    .Howren.ml10 {
+        letter-spacing: 1px;
+    }
+
+    .Howren.ml05 span::after,
+    .Howren.ml10 span::after {
+        width: 54px;
+    }
+
+    .Howren.ml12 h2 {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .Howren.ml12 i {
+        width: 48px;
+    }
+
+    .Howren.ml16 {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 370px) {
+    .Howren.ml16 {
+        grid-template-columns: minmax(150px, 1fr);
+    }
+}
