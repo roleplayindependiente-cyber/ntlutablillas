@@ -63,7 +63,12 @@ body::before{
   overflow:hidden;
   border:1px solid var(--line);
   border-radius:var(--radius);
-  background:linear-gradient(110deg,rgba(15,28,41,.94),rgba(16,23,31,.93) 46%,rgba(11,16,22,.92));
+ background:
+  linear-gradient(
+    135deg,
+    color-mix(in srgb,var(--dbckg5) 78%,var(--blue) 22%),
+    color-mix(in srgb,var(--dbckg5) 88%,var(--blue) 12%)
+  );
 }
 
 .room::after{
@@ -86,13 +91,11 @@ body::before{
   text-align:center;
   text-transform:uppercase;
   background:
-    linear-gradient(
-      110deg,
-      rgba(15,28,41,.94),
-      rgba(16,23,31,.93) 46%,
-      rgba(11,16,22,.92)
-    )!important;
-
+  linear-gradient(
+    180deg,
+    color-mix(in srgb,var(--dbckg5) 72%,var(--blue) 28%),
+    color-mix(in srgb,var(--dbckg5) 90%,var(--blue) 10%)
+  )!important;
   background-image:none!important;
   overflow:hidden;
 }
@@ -169,7 +172,8 @@ body::before{
   border:1px solid rgba(190,205,220,.18);
   border-radius:11px;
   outline:none;
-  background:#111820;
+  background:
+  color-mix(in srgb,var(--dbckg5) 92%,var(--blue) 8%);
 }
 
 .resident__photo{
@@ -194,10 +198,17 @@ body::before{
   opacity:0;
   overflow:hidden;
   transform:translateY(10px);
-  background:
-    linear-gradient(160deg,rgba(13,28,42,.97),rgba(8,14,22,.98)),
-    radial-gradient(circle at top right,rgba(79,105,151,.22),transparent 45%);
-  transition:opacity .35s ease,transform .35s ease;
+   background:
+    linear-gradient(
+      160deg,
+      color-mix(in srgb,var(--dbckg5) 70%,var(--blue) 30%),
+      color-mix(in srgb,var(--dbckg5) 92%,var(--blue) 8%)
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(79,105,151,.20),
+      transparent 45%
+    );
 }
 
 .resident__overlay::before{
@@ -300,7 +311,12 @@ body::before{
   padding:14px 15px;
   border:1px solid rgba(167,185,202,.13);
   border-radius:11px;
-  background:linear-gradient(135deg,rgba(7,15,23,.72),rgba(17,27,37,.74));
+  background:
+  linear-gradient(
+    135deg,
+    color-mix(in srgb,var(--dbckg5) 80%,var(--blue) 20%),
+    color-mix(in srgb,var(--dbckg5) 94%,var(--blue) 6%)
+  );
 }
 
 .room__description{
@@ -348,7 +364,7 @@ body::before{
   padding:10px 10px 10px 32px;
   border:1px solid rgba(167,185,202,.1);
   border-radius:8px;
-  background:rgba(5,12,18,.3);
+ color-mix(in srgb,var(--dbckg5) 92%,var(--blue) 8%);
 }
 
 .room__facts i{
@@ -457,11 +473,11 @@ body::before{
   .room__identity{
      justify-content:center;
   padding-top:0;
-      background:
+  background:
   linear-gradient(
     180deg,
-    #1b2838,
-    #111a24
+    color-mix(in srgb,var(--dbckg5) 70%,var(--blue) 30%),
+    color-mix(in srgb,var(--dbckg5) 92%,var(--blue) 8%)
   );
   }
 
