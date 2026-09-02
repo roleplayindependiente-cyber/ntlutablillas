@@ -1,10 +1,11 @@
-:root{--zorvikverde:#2A623D;--zorvikoro:#C4A45D;--zorvikoscuro:#132019}
-*{box-sizing:border-box}
-body{margin:0;padding:30px 10px;background:#151515;color:#aaa;font-family:"Poppins",sans-serif}
-.zorvikhab00{width:550px;max-width:100%;margin:0 auto 34px;background:var(--dbckg4,#1a1a1a);border:1px solid var(--border1-c,#252525);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px #0002}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+:root{--zorvikverde:#2A623D;--zorvikoro:#C4A45D}
+.zorvikhab00{box-sizing:border-box;width:550px;max-width:100%;margin:0 auto 34px;background:var(--dbckg4,#1a1a1a);border:1px solid var(--border1-c,#252525);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px #0002;font-family:"Poppins",sans-serif;color:#aaa}
+.zorvikhab00 *{box-sizing:border-box}
 .zorvikhab01titulo{min-height:43px;padding:5px 20px;color:var(--title,#eee);text-shadow:var(--shadow-b2);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border1-c,#252525);font-size:11px;font-weight:500}
-.zorvikhab01titulo span{text-transform:lowercase;letter-spacing:.1px}
-.zorvikhab01titulo b{color:var(--zorvikverde);font-weight:600}
+.zorvikhab01titulo span{text-transform:lowercase}.zorvikhab01titulo b{color:var(--zorvikverde)}
 .zorvikhab02numhab{width:26px;height:26px;display:grid;place-items:center;color:var(--zorvikoro);border:1px solid #c4a45d42;border-radius:50%;background:#c4a45d0b}
 .zorvikhab03fotos{display:grid;grid-template-columns:repeat(2,235px);justify-content:center;gap:12px;padding:20px}
 .zorvikhab04personaje{position:relative;width:235px;height:235px;overflow:hidden;border:1px solid var(--border1-c,#333);border-radius:7px;background:#222;outline:0}
@@ -14,9 +15,7 @@ body{margin:0;padding:30px 10px;background:#151515;color:#aaa;font-family:"Poppi
 .zorvikhab04personaje:hover .zorvikhab05datos,.zorvikhab04personaje:focus .zorvikhab05datos{opacity:1;transform:none}
 .zorvikhab06nombre{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #c4a45d66;color:var(--title,#fff);font:600 14px "Cinzel",serif;letter-spacing:.4px}
 .zorvikhab06nombre i{margin-left:auto;color:var(--zorvikoro);font-size:11px}
-.zorvikhab07ficha{font-size:10px;line-height:1.65}
-.zorvikhab07ficha b{color:#76a986;font-weight:600}
+.zorvikhab07ficha{font-size:10px;line-height:1.65}.zorvikhab07ficha b{color:#76a986;font-weight:600}
 .zorvikhab08info{height:105px;margin:0 20px 20px;padding:14px 20px;overflow-y:auto;border:1px solid var(--border1-c,#252525);border-radius:7px;background:#171717;color:#aaa;font-size:10px;line-height:1.7;text-align:center;scrollbar-width:none;-ms-overflow-style:none}
-.zorvikhab08info b{color:var(--zorvikverde);font-weight:600}
-.zorvikhab08info::-webkit-scrollbar{width:0;height:0;background:transparent}
+.zorvikhab08info b{color:var(--zorvikverde);font-weight:600}.zorvikhab08info::-webkit-scrollbar{width:0;height:0;background:transparent}
 @media(max-width:540px){.zorvikhab03fotos{grid-template-columns:minmax(0,235px)}.zorvikhab00{width:277px}}
