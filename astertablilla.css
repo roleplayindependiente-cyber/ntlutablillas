@@ -457,3 +457,19 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+.aster-role .aster-subtitle {
+  border-bottom: 1px solid var(--aster-border);
+  padding-bottom: 21px;
+}
+
+.aster-role .aster-post {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 25px;
+}
+
+.aster-role .aster-bottom-ribbon {
+  border-top: 1px solid var(--aster-border);
+  border-bottom: 0;
+}
